@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Yellow.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/17/2016
 ** Description: Contains the Yellow class definition file.
 ** Input: exitGame() takes 6 Space pointers for linking rooms.
@@ -15,7 +15,7 @@ using std::cin;
 
 
 /*******************************************************************************
-**						function set'Color'Pointers()
+**			function set'Color'Pointers()
 ** Sets color pointers to all other rooms.  Called from ThrowBack.cpp main()
 ** Input: Space class color pointers other than this class.
 ** Output:void
@@ -44,7 +44,7 @@ Yellow::~Yellow() {
 
 
 /*******************************************************************************
-**						function setstrength() 3 each.
+**			function setstrength() 3 each.
 ** Setters for stregth. setStrength() for initialization, setSTregth(int) for
 ** updating local room strength changes. getStrength for logic control, and
 ** acceptStrength() sets overall current Player strength upon Player entry to
@@ -72,7 +72,7 @@ int Yellow::acceptStrength(int strength) {
 
 
 /*******************************************************************************
-**					function setPPColor() 3 each.
+**			function setPPColor() 3 each.
 ** Initializes Player color puzzle piece, logic control locally to ths room, and
 ** getPPBlue used by ThrowBack.cpp for logic control and displayBP()
 ** Input: bool to initialize and set when Player finds color puzzle piece.
@@ -92,7 +92,7 @@ bool Yellow::getPPYellow() {
 
 
 /*******************************************************************************
-**						function initCharBools()
+**			function initCharBools()
 ** Initializes individual characters variables at room initializaton.
 ******************************************************************************/
 void Yellow::initCharBools() {
@@ -115,7 +115,7 @@ void Yellow::initCharBools() {
 
 
 /*******************************************************************************
-**						function runRoom()
+**			function runRoom()
 ** Virtual function used by Throwback.cpp main logic loop. Calls to this function
 ** initiates runCharacters() for Player to choosw which character to visit, calls
 ** the special virtual funtion boostStregnth(), and calls the local runController()
@@ -156,7 +156,7 @@ int Yellow::runRoom() {
 
 
 /*******************************************************************************
-**						function boostStrenght()
+**			function boostStrenght()
 ** Pure virtual function that ascertains and offers a strength boost for a
 ** Player whose stregnth is below 25.  Calls local setStregnth() with int
 ** paramter set.
@@ -184,7 +184,7 @@ void Yellow::boostStrength() {
 
 
 /*******************************************************************************
-**						function runCharacters()
+**			function runCharacters()
 ** Player chocie cout/cin input validation module. Returns an int for choice of
 ** character to visit to runController()
 ** Input: Player
@@ -216,7 +216,7 @@ int Yellow::runCharacters() {
 
 
 /*******************************************************************************
-**						function runController()
+**			function runController()
 ** Main contol module for room.  Calls, sets, and manages program control as
 ** Plyer navigates characters responses to PlayerAI() generted query.
 ** Input: int arg from runCharacters()
@@ -314,7 +314,7 @@ int Yellow::runController(int in) {
 				if (choice2 == 6) { setStrength(-1); arg = 0; }
 			}
 		}
-		else if (arg == 6) {			/**** Change Rooms ****/
+		else if (arg == 6) {		/**** Change Rooms ****/
 			arg = 8;
 		}
 	}
@@ -323,7 +323,7 @@ int Yellow::runController(int in) {
 
 
 /*******************************************************************************
-**						function playerAI()
+**			function playerAI()
 ** Player's query module for asking questions to each character as selected by
 ** Player. Returns int arg for run CharacterName().
 ** Input: Player out arg selected.
@@ -366,7 +366,7 @@ int Yellow::playerAI() {
 
 
 /***************************************************************************************************************
-**						function run Characters() 5 each.
+**			function run Characters() 5 each.
 ** Indivdual character responses to PlayerAI query. Player is assesed and awarded points based upon query and
 ** characters call stack in runController()
 ** Input: PlayerAI query choice.
@@ -463,7 +463,7 @@ int Yellow::runBigBird(int inMessage) {
 		out = 5;
 	}
 	else if (inMessage == 6) {
-		cout << palette(19) << "Big Bird: I’m gonna miss you, Mr. Looper." << palette(1) << "\n";
+		cout << palette(19) << "Big Bird: IÂ’m gonna miss you, Mr. Looper." << palette(1) << "\n";
 		out = 6;
 	}
 	return out;
@@ -623,7 +623,7 @@ int Yellow::runSpongeBobSquarePants(int inMessage) {
 
 
 /*******************************************************************************
-**						function set Bools() 30 each
+**			function set Bools() 30 each
 ** Individual getter and setter functions for each character. Used chiefly by
 ** runContoller() locally but also by ThrowBack.cpp
 ** Input: various bool per character queried.
@@ -755,7 +755,7 @@ bool Yellow::getSpongeBobSquarePantsDrink() {
 
 
 /*******************************************************************************
-**						function set Color() 6 each
+**			function set Color() 6 each
 ** Setters for the 6 rooms other than this one.  This is how a player can
 ** travel between rooms. Called and used by ThrowBack.cpp
 ** Input: Space* for each individual room.

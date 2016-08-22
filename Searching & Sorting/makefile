@@ -1,8 +1,8 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 02/21/2016
 # File: makefile
-# Description: makefile for Lab_7  CS162-400-W16. 
+# Description: makefile for seeksort.
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.
@@ -63,7 +63,7 @@ PROGS = ${PROG1}
 
 # This is the name of your tar/compressed file. 
 # Edit name as needed. Keep the format.
-TAR = cs162_assignment1_kearnsc.tar.bz2
+TAR = seeksort.tar.bz2
 
 #####################
 ### BUILD SECTION ###

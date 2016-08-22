@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: BlueMen.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: BlueMen child class declaration file.
 *****************************************************************************************/
@@ -19,7 +19,7 @@ protected:
 	int dieSides_A;	// 10
 	int numDie_D;	//  3/2/1
 	int dieSides_D;	//  6
-	int armor;		//  3
+	int armor;	//  3
 	int player;
 	string name;
 	string type;

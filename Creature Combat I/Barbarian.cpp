@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Barbarian.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Barbarian class implementation file.
 ** Input:
@@ -24,7 +24,6 @@ using std::endl;
 /***************************************************************************************
 ** Function: Barbarian()
 ** Description: Constructor for Barbarian derived class.
-**
 ** Parameters: none.
 ** Pre-Conditions:
 ** Post-Conditions:
@@ -42,7 +41,7 @@ Barbarian::~Barbarian() {}
 /***************************************************************************************
 ** Function: roll()
 ** Description:	Returns a random int from the sum of numDie rolls for attack and defense
-** funtions.
+** functions.
 ** Parameters: string "AorD" dummy parameter to avoid overloading virtual function.
 ** Pre-Conditions: Runs on Linux console.
 ** Post-Conditions: Need to delete object and set pointer to null

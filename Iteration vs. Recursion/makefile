@@ -1,8 +1,8 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 03/06/2016
 # File: makefile
-# Description: makefile for Lab 9 CS162-400-W16. 
+# Description: makefile for "curse". 
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.

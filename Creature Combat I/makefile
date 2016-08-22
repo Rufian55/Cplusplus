@@ -1,8 +1,8 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 02/14/2016
 # File: makefile
-# Description: makefile for Assignment_3  CS162-400-W16. 
+# Description: verbose makefile for Creature Combat I. 
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.

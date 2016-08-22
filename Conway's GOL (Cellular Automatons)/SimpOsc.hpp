@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: SimpOsc.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Header file for SimpOsc.cpp.
 ** Input:
@@ -11,4 +11,4 @@
 
 void simpOsc(int anArray[]);
 
-#endif //!SIMPOSC_HPP
+#endif

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Space.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/17/2016
 ** Description: Contains the Space class definition file.
 ** Input: exitGame() takes 8 Space pointers for memory deallocation.
@@ -13,7 +13,7 @@ using std::cin;
 #include<cstdlib>
 
 /***************************************************************************************************************
-**											function welcome()
+**					function welcome()
 ** Initial game play welcome screen utilizing palette for text color decoration. Returns an int to the call
 ** based upon user input for play game or quit.
 ** Input: void.
@@ -86,7 +86,7 @@ int Space::welcome() {
 
 
 /*******************************************************************************
-**							function go2Roome()
+**				function go2Roome()
 ** Virtual function called by Throwback.cpp when Player chooses a different room
 ** to visit.  Called via the tBack*.
 ** Input: Player cin 
@@ -121,7 +121,7 @@ int Space::go2Room() {
 }
 
 /*******************************************************************************
-**							function exitGame()
+**				function exitGame()
 ** Exits game and utilizing palette(1) for text color decoration returns Player
 ** console to default white.  Valgrind checks good!
 ** Input: void.
@@ -151,7 +151,7 @@ void Space::exitGame(Space* blue, Space* yellow, Space* cyan, Space* green,
 
 
 /*******************************************************************************
-**							function pallete()
+**				function pallete()
 ** Takes an int argument for selected color and returns a string containing the
 ** ASCII escape codes for color and/or text decoration.  Should be used cout and
 ** followed by a default color reset in the same cout line. Ints outside of
@@ -175,7 +175,7 @@ string Space::palette(int color) {
 		col = "\033[1;37m";		// cout << "\033[1;37m" << "Bold White.\n";
 		break;
 	case 5:
-		col = "\033[1;4;37m";	// cout << "\033[4;37m" << "Underlined Bold White.\n";
+		col = "\033[1;4;37m";		// cout << "\033[4;37m" << "Underlined Bold White.\n";
 		break;
 	case 6:
 		col = "\033[0;31m";		// cout << "\033[0;31m" << "Red.\n";
@@ -184,13 +184,13 @@ string Space::palette(int color) {
 		col = "\033[7;31m";		// cout << "\033[7;31m" << "Background Red.\n";
 		break;
 	case 8:
-		col = "\033[0;4;31m";	// cout << "\033[0;4;31m" << "Underlined Red.\n";
+		col = "\033[0;4;31m";		// cout << "\033[0;4;31m" << "Underlined Red.\n";
 		break;
 	case 9:
 		col = "\033[1;31m";		// cout << "\033[1;31m" << "Bold Red.\n";
 		break;
 	case 10:
-		col = "\033[4;1;31m";	// cout << "\033[4;31m" << "Underlined Bold Red.\n";
+		col = "\033[4;1;31m";		// cout << "\033[4;31m" << "Underlined Bold Red.\n";
 		break;
 	case 11:
 		col = "\033[0;32m";		// cout << "\033[0;32m" << "Green.\n";
@@ -199,13 +199,13 @@ string Space::palette(int color) {
 		col = "\033[7;32m";		// cout << "\033[7;32m" << "Background Green.\n";
 		break;
 	case 13:
-		col = "\033[0;4;32m";	// cout << "\033[0;4;32m" << "Underlined Green.\n";
+		col = "\033[0;4;32m";		// cout << "\033[0;4;32m" << "Underlined Green.\n";
 		break;
 	case 14:
 		col = "\033[1;32m";		// cout << "\033[1;32m" << "Bold Green.\n";
 		break;
 	case 15:
-		col = "\033[1;4;32m";	// cout << "\033[4;32m" << "Underlined Bold Green.\n";
+		col = "\033[1;4;32m";		// cout << "\033[4;32m" << "Underlined Bold Green.\n";
 		break;
 	case 16:
 		col = "\033[0;33m";		// cout << "\033[0;33m" << "Yellow.\n";
@@ -214,13 +214,13 @@ string Space::palette(int color) {
 		col = "\033[7;33m";		// cout << "\033[7;33m" << "Background Yellow.\n";
 		break;
 	case 18:
-		col = "\033[0;4;33m";	// cout << "\033[0;4;33m" << "Underlined Yellow.\n";
+		col = "\033[0;4;33m";		// cout << "\033[0;4;33m" << "Underlined Yellow.\n";
 		break;
 	case 19:
 		col = "\033[1;33m";		// cout << "\033[1;33m" << "Bold Yellow.\n";
 		break;
 	case 20:
-		col = "\033[1;4;33m";	// cout << "\033[4;33m" << "Underlined Bold Yellow.\n";
+		col = "\033[1;4;33m";		// cout << "\033[4;33m" << "Underlined Bold Yellow.\n";
 		break;
 	case 21:
 		col = "\033[0;34m";		// cout << "\033[0;34m" << "Blue.\n";
@@ -229,13 +229,13 @@ string Space::palette(int color) {
 		col = "\033[7;34m";		// cout << "\033[7;34m" << "Background Blue.\n";
 		break;
 	case 23:
-		col = "\033[0;4;34m";	// cout << "\033[0;4;34m" << "Underlined Blue.\n";
+		col = "\033[0;4;34m";		// cout << "\033[0;4;34m" << "Underlined Blue.\n";
 		break;
 	case 24:
 		col = "\033[1;34m";		// cout << "\033[1;34m" << "Bold Blue.\n";
 		break;
 	case 25:
-		col = "\033[1;4;34m";	// cout << "\033[4;34m" << "Underlined Bold Blue.\n";
+		col = "\033[1;4;34m";		// cout << "\033[4;34m" << "Underlined Bold Blue.\n";
 		break;
 	case 26:
 		col = "\033[0;35m";		// cout << "\033[0;35m" << "Magenta.\n";
@@ -244,13 +244,13 @@ string Space::palette(int color) {
 		col = "\033[7;35m";		// cout << "\033[7;35m" << "Background Magenta.\n";
 		break;
 	case 28:
-		col = "\033[0;4;35m";	// cout << "\033[0;4;35m" << "Underlined Magenta.\n";
+		col = "\033[0;4;35m";		// cout << "\033[0;4;35m" << "Underlined Magenta.\n";
 		break;
 	case 29:
 		col = "\033[1;35m";		// cout << "\033[1;35m" << "Bold Magenta.\n";
 		break;
 	case 30:
-		col = "\033[1;4;35m";	// cout << "\033[4;35m" << "Underlined Bold Magenta.\n";
+		col = "\033[1;4;35m";		// cout << "\033[4;35m" << "Underlined Bold Magenta.\n";
 		break;
 	case 31:
 		col = "\033[0;36m";		// cout << "\033[0;36m" << "Cyan.\n";
@@ -259,13 +259,13 @@ string Space::palette(int color) {
 		col = "\033[7;36m";		// cout << "\033[7;36m" << "Background Cyan.\n";
 		break;
 	case 33:
-		col = "\033[0;4;36m";	// cout << "\033[0;4;36m" << "Underlined Cyan.\n";
+		col = "\033[0;4;36m";		// cout << "\033[0;4;36m" << "Underlined Cyan.\n";
 		break;
 	case 34:
 		col = "\033[1;36m";		// cout << "\033[1;36m" << "Bold Cyan.\n";
 		break;
 	case 35:
-		col = "\033[1;4;36m";	// cout << "\033[4;36m" << "Underlined Bold Cyan.\n";
+		col = "\033[1;4;36m";		// cout << "\033[4;36m" << "Underlined Bold Cyan.\n";
 		break;
 	default:
 		col = "\033[0m";		// cout << "\033[0m" << "The default color.\n";

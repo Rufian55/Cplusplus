@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: White.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/13/2016
 ** Description: White abstract class declaration file.
 *****************************************************************************************/
@@ -43,11 +43,11 @@ public:
 	~White();
 	void setStrength();
 	virtual void setStrength(int);		// Local Overload.
-	virtual int getStrength();			// Local strength.
+	virtual int getStrength();		// Local strength.
 	virtual int acceptStrength(int);	// From Throwback strength.
 
 	void setPPWhite(bool);
-	void setPPWhite();					//Overload.
+	void setPPWhite();			//Overload.
 	virtual bool getPPWhite();
 	void initCharBools();
 

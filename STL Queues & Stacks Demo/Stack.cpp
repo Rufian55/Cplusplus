@@ -1,6 +1,6 @@
 /********************************************************************************
 ** Program Filename: Stack.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/06/2016
 ** Description: STL Stack class implementation file.
 ** Input:
@@ -12,7 +12,7 @@ using std::stack;
 
 
 /*******************************************************************************
-**							function isPalin()
+**			function isPalin()
 ** Accepts string parameter and compares itself to a reveresed string using the
 ** string libaray public memeber reverse iterators rbegin and rend.  Returns true
 ** if reveresed string == input string, indicating input was already a palindrome.
@@ -29,7 +29,7 @@ bool Stack::isPalin(string palin){
 
 
 /*******************************************************************************
-**							function palinBuilder()
+**			function palinBuilder()
 ** Accepts string parameter, calls isPalin for the case of input already being
 ** a palindrome and returns it. Otherwise, the input string is added to an stl
 ** type char stack character by character, and then conveniently removed LIFO

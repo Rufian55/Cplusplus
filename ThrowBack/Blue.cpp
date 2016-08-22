@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Blue.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/17/2016
 ** Description: Contains the Blue class definition file.
 ** Input: exitGame() takes 6 Space pointers for linking rooms.
@@ -15,7 +15,7 @@ using std::cin;
 
 
 /*******************************************************************************
-**						function set'Color'Pointers()
+**			function set'Color'Pointers()
 ** Sets color pointers to all other rooms.  Called from ThrowBack.cpp main()
 ** Input: Space class color pointers other than this class.
 ** Output:void
@@ -44,7 +44,7 @@ Blue::~Blue(){
 
 
 /*******************************************************************************
-**						function setTrngth() 3 each.
+**			function setTrngth() 3 each.
 ** Setters for stregth. setStrength() for initialization, setSTregth(int) for
 ** updating local room strength changes. getStrength for logic control, and
 ** acceptStrength() sets overall current Player strength upon Player entry to 
@@ -72,7 +72,7 @@ int Blue::acceptStrength(int strength){
 
 
 /*******************************************************************************
-**					function setPPColor() 3 each.
+**				function setPPColor() 3 each.
 ** Initializes Player color puzzle piece, logic control locally to ths room, and 
 ** getPPBlue used by ThrowBack.cpp for logic control and displayBP()
 ** Input: bool to initialize and set when Player finds color puzzle piece.
@@ -92,7 +92,7 @@ bool Blue::getPPBlue() {
 
 
 /*******************************************************************************
-**						function initCharBools()
+**				function initCharBools()
 ** Initializes individual characters variables at room initializaton.
 ******************************************************************************/
 void Blue::initCharBools() {
@@ -115,7 +115,7 @@ void Blue::initCharBools() {
 
 
 /*******************************************************************************
-**						function runRoom()
+**				function runRoom()
 ** Virtual function used by Throwback.cpp main logic loop. Calls to this function
 ** initiates runCharacters() for Player to choosw which character to visit, calls
 ** the special virtual funtion boostStregnth(), and calls the local runController() 
@@ -156,7 +156,7 @@ int Blue::runRoom() {
 
 
 /*******************************************************************************
-**						function boostStrength()
+**				function boostStrength()
 ** Pure virtual function that ascertains and offers a strength boost for a 
 ** Player whose stregnth is below 25.  Calls local setStregnth() with int
 ** paramter set.
@@ -184,7 +184,7 @@ void Blue::boostStrength() {
 
 
 /*******************************************************************************
-**						function runCharacters()
+**				function runCharacters()
 ** Player chocie cout/cin input validation module. Returns an int for choice of
 ** character to visit to runController()
 ** Input: Player
@@ -216,11 +216,11 @@ int Blue::runCharacters() {
 
 
 /*******************************************************************************
-**						function runController()
+**				function runController()
 ** Main contol module for room.  Calls, sets, and manages program control as 
 ** Plyer navigates characters responses to PlayerAI() generted query.
 ** Input: int arg from runCharacters()
-** Output: int arg to runRoom() charcter control function. 
+** Output: int arg to runRoom() character control function. 
 ******************************************************************************/
 int Blue::runController(int in) {
 	int arg = in;
@@ -323,7 +323,7 @@ int Blue::runController(int in) {
 
 
 /*******************************************************************************
-**						function playerAI()
+**				function playerAI()
 ** Player's query module for asking questions to each character as selected by
 ** Player. Returns int arg for run CharacterName().
 ** Input: Player out arg selected.
@@ -624,7 +624,7 @@ int Blue::runBobBlob(int inMessage) {
 
 
 /*******************************************************************************
-**						function set Bools() 30 each
+**				function set Bools() 30 each
 ** Individual getter and setter functions for each character. Used chiefly by
 ** runContoller() locally but also by ThrowBack.cpp
 ** Input: various bool per character queried.
@@ -755,7 +755,7 @@ bool Blue::getBobBlobDrink() {
 }
 
 /*******************************************************************************
-**						function set Color() 6 each
+**				function set Color() 6 each
 ** Setters for the 6 rooms other than this one.  This is how a player can 
 ** travel between rooms. Called and used by ThrowBack.cpp
 ** Input: Space* for each individual room.

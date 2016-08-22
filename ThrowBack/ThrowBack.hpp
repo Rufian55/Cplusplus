@@ -43,7 +43,7 @@ public:
 
 	void throwBack(Space*, Space*, Space*, Space*, Space*, Space*, Space*, Space*, ThrowBack*);
 
-	void setStrength() { this->strength = 50; }		// Local initializer.
+	void setStrength() { this->strength = 10; }		// Local initializer.
 	virtual void setStrength(int);				// Overload local setter.
 	virtual int getStrength();				// Local getter.
 

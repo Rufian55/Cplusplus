@@ -1,5 +1,5 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 02/14/2016
 # File: makefile
 # Description: makefile for Queues & Stacks

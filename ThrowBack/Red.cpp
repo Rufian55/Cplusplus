@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Red.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/17/2016
 ** Description: Contains the Red class definition file.
 ** Input: exitGame() takes 6 Space pointers for linking rooms.
@@ -14,7 +14,7 @@ using std::cout;
 using std::cin;
 
 /*******************************************************************************
-**						function set'Color'Pointers()
+**			function set'Color'Pointers()
 ** Sets color pointers to all other rooms.  Called from ThrowBack.cpp main()
 ** Input: Space class color pointers other than this class.
 ** Output:void
@@ -43,7 +43,7 @@ Red::~Red() {
 
 
 /*******************************************************************************
-**						function setTrngth() 3 each.
+**			function setTrngth() 3 each.
 ** Setters for stregth. setStrength() for initialization, setSTregth(int) for
 ** updating local room strength changes. getStrength for logic control, and
 ** acceptStrength() sets overall current Player strength upon Player entry to
@@ -71,7 +71,7 @@ int Red::acceptStrength(int strength) {
 
 
 /*******************************************************************************
-**					function setPPColor() 3 each.
+**			function setPPColor() 3 each.
 ** Initializes Player color puzzle piece, logic control locally to ths room, and
 ** getPPBlue used by ThrowBack.cpp for logic control and displayBP()
 ** Input: bool to initialize and set when Player finds color puzzle piece.
@@ -91,7 +91,7 @@ bool Red::getPPRed() {
 
 
 /*******************************************************************************
-**						function initCharBools()
+**			function initCharBools()
 ** Initializes individual characters variables at room initializaton.
 ******************************************************************************/
 void Red::initCharBools() {
@@ -114,7 +114,7 @@ void Red::initCharBools() {
 
 
 /*******************************************************************************
-**						function runRoom()
+**			function runRoom()
 ** Virtual function used by Throwback.cpp main logic loop. Calls to this function
 ** initiates runCharacters() for Player to choosw which character to visit, calls
 ** the special virtual funtion boostStregnth(), and calls the local runController()
@@ -132,7 +132,7 @@ int Red::runRoom() {
 	while (choice > 0 && choice <= 6) {
 		choice = runCharacters();
 		if (choice == 1) {
-			choice = runController(1);	// JeffFungus
+			choice = runController(1);	// Jeff Fungus
 		}
 		else if (choice == 2) {
 			choice = runController(2);	// Blinkey
@@ -155,7 +155,7 @@ int Red::runRoom() {
 
 
 /*******************************************************************************
-**						function boostStrenght()
+**			function boostStrenght()
 ** Pure virtual function that ascertains and offers a strength boost for a
 ** Player whose stregnth is below 25.  Calls local setStregnth() with int
 ** paramter set.
@@ -183,7 +183,7 @@ void Red::boostStrength() {
 
 
 /*******************************************************************************
-**						function runCharacters()
+**			function runCharacters()
 ** Player chocie cout/cin input validation module. Returns an int for choice of
 ** character to visit to runController()
 ** Input: Player
@@ -215,7 +215,7 @@ int Red::runCharacters() {
 
 
 /*******************************************************************************
-**						function runController()
+**			function runController()
 ** Main contol module for room.  Calls, sets, and manages program control as
 ** Plyer navigates characters responses to PlayerAI() generted query.
 ** Input: int arg from runCharacters()
@@ -226,7 +226,7 @@ int Red::runController(int in) {
 	int choice1;
 	int choice2;
 	while (arg > 0 && arg < 7) {
-		if (arg == 1) {				/**** Red Elmo ****/
+		if (arg == 1) {			/**** Red Elmo ****/
 			while (arg == 1) {
 				choice1 = playerAI();
 				choice2 = runRedElmo(choice1);
@@ -263,7 +263,7 @@ int Red::runController(int in) {
 				if (choice2 == 6) { setStrength(-1); arg = 0; }
 			}
 		}
-		else if (arg == 3) {			/**** Jeff Fungus ****/
+		else if (arg == 3) {		/**** Jeff Fungus ****/
 			while (arg == 3) {
 				choice1 = playerAI();
 				choice2 = runJeffFungus(choice1);
@@ -292,7 +292,7 @@ int Red::runController(int in) {
 				if (choice2 == 6) { setStrength(-1); arg = 0; }
 			}
 		}
-		else if (arg == 5) {			/**** Chef ****/
+		else if (arg == 5) {		/**** Chef ****/
 			while (arg == 5) {
 				choice1 = playerAI();
 				choice2 = runChef(choice1);
@@ -314,7 +314,7 @@ int Red::runController(int in) {
 				if (choice2 == 6) { setStrength(-1); arg = 0; }
 			}
 		}
-		else if (arg == 6) {			/**** Change Rooms ****/
+		else if (arg == 6) {		/**** Change Rooms ****/
 			arg = 8;
 		}
 	}
@@ -323,7 +323,7 @@ int Red::runController(int in) {
 
 
 /*******************************************************************************
-**						function playerAI()
+**			function playerAI()
 ** Player's query module for asking questions to each character as selected by
 ** Player. Returns int arg for run CharacterName().
 ** Input: Player out arg selected.
@@ -366,7 +366,7 @@ int Red::playerAI() {
 
 
 /***************************************************************************************************************
-**						function run Characters() 5 each.
+**				function run Characters() 5 each.
 ** Indivdual character responses to PlayerAI query. Player is assesed and awarded points based upon query and
 ** characters call stack in runController()
 ** Input: PlayerAI query choice.
@@ -623,7 +623,7 @@ int Red::runChef(int inMessage) {
 
 
 /*******************************************************************************
-**						function set Bools() 30 each
+**			function set Bools() 30 each
 ** Individual getter and setter functions for each character. Used chiefly by
 ** runContoller() locally but also by ThrowBack.cpp
 ** Input: various bool per character queried.
@@ -755,7 +755,7 @@ bool Red::getChefDrink() {
 
 
 /*******************************************************************************
-**						function set Color() 6 each
+**			function set Color() 6 each
 ** Setters for the 6 rooms other than this one.  This is how a player can
 ** travel between rooms. Called and used by ThrowBack.cpp
 ** Input: Space* for each individual room.

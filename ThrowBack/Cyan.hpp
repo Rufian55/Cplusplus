@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Cyan.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/13/2016
 ** Description: Cyan abstract class declaration file.
 *****************************************************************************************/
@@ -43,11 +43,11 @@ public:
 	~Cyan();
 	void setStrength();
 	virtual void setStrength(int);		// Local Overload.
-	virtual int getStrength();			// Local strength.
+	virtual int getStrength();		// Local strength.
 	virtual int acceptStrength(int);	// From Throwback strength.
 
 	void setPPCyan(bool);
-	void setPPCyan();					//Overload.
+	void setPPCyan();			//Overload.
 	virtual bool getPPCyan();
 	void initCharBools();
 

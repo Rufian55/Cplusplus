@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Magenta.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/13/2016
 ** Description: Magenta abstract class declaration file.
 *****************************************************************************************/
@@ -43,11 +43,11 @@ public:
 	~Magenta();
 	void setStrength();
 	virtual void setStrength(int);		// Local Overload.
-	virtual int getStrength();			// Local strength.
+	virtual int getStrength();		// Local strength.
 	virtual int acceptStrength(int);	// From Throwback strength.
 
 	void setPPMagenta(bool);
-	void setPPMagenta();						//Overload.
+	void setPPMagenta();			// Overload.
 	virtual bool getPPMagenta();
 	void initCharBools();
 

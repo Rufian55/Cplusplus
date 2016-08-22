@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Game.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/24/2016
 ** Description: Game class header file.
 ** Input:
@@ -11,7 +11,7 @@
 
 class Game {
 private:
-	int roundsToPlay;				// roundsToPlay as input by user.
+	int roundsToPlay;			// roundsToPlay as input by user.
 
 public:
 	void createGame(int);			// Constructor.

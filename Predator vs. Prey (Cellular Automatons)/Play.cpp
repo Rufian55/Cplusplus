@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Play.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Play class implementation file. Utilizes virtual class Critter, then Ant
 ** and Doodlbug classes.  
@@ -32,7 +32,6 @@ using std::rand;
 ** Post-Conditions: None.
 ****************************************************************************************/
 void Play::grid() {
-
 	int rows = 0;				// user input collection var for matrix rows.
 	int cols = 0;				// user input collection var for martix columns.
 	int numAnts = 0;			// input collection var.
@@ -41,7 +40,7 @@ void Play::grid() {
 	int count_2 = 0;			// local accumulator var for adding dBugs.
 	int timeSteps = 0;			// incementing time simulation var.
 	int iters = 0;				// # of animations outputted.
-	int timer = 1000000 / 10;	// Set frame refresh rate.
+	int timer = 1000000 / 10;		// Set frame refresh rate.
 
 	cout << "Welcome to Predater Prey!\n";
 
@@ -157,7 +156,7 @@ void Play::grid() {
 		}
 	}
 
-	//Animation loop +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//Animation loop +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 	for (int timestep = 0; timestep < timeSteps; timestep++) {
 
@@ -199,20 +198,20 @@ void Play::grid() {
 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				if (matrix_1[i][j] != 0) {									// matrix_0 array element is a Critter.
-					if (matrix_1[i][j]->getName() == 'D') {					// Object is a dBug.
-						matrix_1[i][j]->move(i, j, rows, cols);				// Determine proposed new coordinates.
-						int anX = matrix_1[i][j]->getxLoc();				// Get dBug's proposed new x coordinate.
-						int anY = matrix_1[i][j]->getyLoc();				// Get dBug's proposed new y coordinate.
-						if (matrix_1[anX][anY] == 0) {						// Dont't call getName() on NULL Ptr!
+				if (matrix_1[i][j] != 0) {					// matrix_0 array element is a Critter.
+					if (matrix_1[i][j]->getName() == 'D') {			// Object is a dBug.
+						matrix_1[i][j]->move(i, j, rows, cols);		// Determine proposed new coordinates.
+						int anX = matrix_1[i][j]->getxLoc();		// Get dBug's proposed new x coordinate.
+						int anY = matrix_1[i][j]->getyLoc();		// Get dBug's proposed new y coordinate.
+						if (matrix_1[anX][anY] == 0) {			// Dont't call getName() on NULL Ptr!
 							matrix_1[anX][anY] = matrix_1[i][j];
 							matrix_1[i][j] = NULL;
 							matrix_1[anX][anY]->setSteps(1);
-							matrix_1[anX][anY]->setStarve(1);				// Didn't eat an Ant! Incur a starveStep!
+							matrix_1[anX][anY]->setStarve(1);	// Didn't eat an Ant! Incur a starveStep!
 
-							if (matrix_1[anX][anY]->getSteps() == 8) {		// Check for dBug Breeding
+							if (matrix_1[anX][anY]->getSteps() == 8) {	// Check for dBug Breeding
 								matrix_1[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_1[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -236,7 +235,7 @@ void Play::grid() {
 										matrix_1[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_1[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -247,16 +246,16 @@ void Play::grid() {
 							}
 						}
 						else if (matrix_1[anX][anY]->getName() == 'a') {	// Eat the Ant!
-							delete matrix_1[anX][anY];						// First delete the Ant.
-							matrix_1[anX][anY] = NULL;						// Set the pointer to NULL.
-							matrix_1[anX][anY] = matrix_1[i][j];			// Move the Doodlebug to the proposed location.
+							delete matrix_1[anX][anY];			// First delete the Ant.
+							matrix_1[anX][anY] = NULL;			// Set the pointer to NULL.
+							matrix_1[anX][anY] = matrix_1[i][j];		// Move the Doodlebug to the proposed location.
 							matrix_1[i][j] = NULL;
 							matrix_1[anX][anY]->setSteps(1);
-							matrix_1[anX][anY]->setStarve();				// Reset this DoodleBug's starveSteps to 0.
+							matrix_1[anX][anY]->setStarve();		// Reset this DoodleBug's starveSteps to 0.
 
-							if (matrix_1[anX][anY]->getSteps() == 8) {		// Check for dBug Breeding
+							if (matrix_1[anX][anY]->getSteps() == 8) {	// Check for dBug Breeding
 								matrix_1[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_1[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -280,7 +279,7 @@ void Play::grid() {
 										matrix_1[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_1[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -290,15 +289,15 @@ void Play::grid() {
 								}
 							}
 						}
-						else {												// New proposed location is another dBug,
-							matrix_1[i][j]->setxLoc(i);						// so we don't move.
+						else {							// New proposed location is another dBug,
+							matrix_1[i][j]->setxLoc(i);			// so we don't move.
 							matrix_1[i][j]->setyLoc(j);
 							matrix_1[anX][anY]->setSteps(1);
-							matrix_1[anX][anY]->setStarve(1);				// Didn't eat an ant! Incur a starveStep!
+							matrix_1[anX][anY]->setStarve(1);		// Didn't eat an ant! Incur a starveStep!
 
-							if (matrix_1[anX][anY]->getSteps() == 8) {		// Check for dBug Breeding
+							if (matrix_1[anX][anY]->getSteps() == 8) {	// Check for dBug Breeding
 								matrix_1[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_1[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -322,7 +321,7 @@ void Play::grid() {
 										matrix_1[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_1[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -339,19 +338,19 @@ void Play::grid() {
 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				if (matrix_1[i][j] != 0) {									// matrix_0 array element is a Critter.
-					if (matrix_1[i][j]->getName() == 'a') {					// Object is an Ant.
-						matrix_1[i][j]->move(i, j, rows, cols);				// Determine proposed new coordinates.
-						int anX = matrix_1[i][j]->getxLoc();				// Get Ant's proposed new x coordinate.
-						int anY = matrix_1[i][j]->getyLoc();				// Get Ant's proposed new y coordinate.
-						if (matrix_1[anX][anY] == 0) {						// Dont't call getName() on NULL Ptr!
+				if (matrix_1[i][j] != 0) {					// matrix_0 array element is a Critter.
+					if (matrix_1[i][j]->getName() == 'a') {			// Object is an Ant.
+						matrix_1[i][j]->move(i, j, rows, cols);		// Determine proposed new coordinates.
+						int anX = matrix_1[i][j]->getxLoc();		// Get Ant's proposed new x coordinate.
+						int anY = matrix_1[i][j]->getyLoc();		// Get Ant's proposed new y coordinate.
+						if (matrix_1[anX][anY] == 0) {			// Dont't call getName() on NULL Ptr!
 							matrix_1[anX][anY] = matrix_1[i][j];
 							matrix_1[i][j] = NULL;
 							matrix_1[anX][anY]->setSteps(1);
 
-							if (matrix_1[anX][anY]->getSteps() == 4) {		// Check for Ant Breeding
+							if (matrix_1[anX][anY]->getSteps() == 4) {	// Check for Ant Breeding
 								matrix_1[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_1[anX - 1][anY] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX - 1);
@@ -372,7 +371,7 @@ void Play::grid() {
 										ant->setyLoc(anY);
 										matrix_1[anX + 1][anY] = ant;
 									}
-								} else if (anY != 0) {						// LEFT
+								} else if (anY != 0) {					// LEFT
 									if (matrix_1[anX][anY - 1] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX);
@@ -382,13 +381,13 @@ void Play::grid() {
 								}
 							}
 						}
-						else {												// New proposed location is another Critter,
-							matrix_1[i][j]->setxLoc(i);						// so we don't move.
+						else {							// New proposed location is another Critter,
+							matrix_1[i][j]->setxLoc(i);			// so we don't move.
 							matrix_1[i][j]->setyLoc(j);
 							matrix_1[i][j]->setSteps(1);
-							if (matrix_1[anX][anY]->getSteps() == 4) {		// Check for Ant Breeding
+							if (matrix_1[anX][anY]->getSteps() == 4) {	// Check for Ant Breeding
 								matrix_1[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_1[anX - 1][anY] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX - 1);
@@ -409,7 +408,7 @@ void Play::grid() {
 										ant->setyLoc(anY);
 										matrix_1[anX + 1][anY] = ant;
 									}
-								} else if (anY != 0) {						// LEFT
+								} else if (anY != 0) {					// LEFT
 									if (matrix_1[anX][anY - 1] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX);
@@ -447,7 +446,7 @@ void Play::grid() {
 				matrix_0[i][j] = matrix_1[i][j];
 				matrix_1[i][j] = NULL;
 				if (matrix_0[i][j] != 0) {
-					if (matrix_0[i][j]->getStarve() == 3) {					// Hasn't eaten in 3 timeSteps so dbug dies!
+					if (matrix_0[i][j]->getStarve() == 3) {		// Hasn't eaten in 3 timeSteps so dbug dies!
 						delete matrix_0[i][j];
 						matrix_0[i][j] = NULL;
 					}
@@ -457,20 +456,20 @@ void Play::grid() {
 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				if (matrix_0[i][j] != 0) {									// matrix_0 array element is a Critter.
-					if (matrix_0[i][j]->getName() == 'D') {					// Object is a dBug.
-						matrix_0[i][j]->move(i, j, rows, cols);				// Determine proposed new coordinates.
-						int anX = matrix_0[i][j]->getxLoc();				// Get dBug's proposed new x coordinate.
-						int anY = matrix_0[i][j]->getyLoc();				// Get dBug's proposed new y coordinate.
-						if (matrix_0[anX][anY] == 0) {						// Dont't call getName() on NULL Ptr!
+				if (matrix_0[i][j] != 0) {					// matrix_0 array element is a Critter.
+					if (matrix_0[i][j]->getName() == 'D') {			// Object is a dBug.
+						matrix_0[i][j]->move(i, j, rows, cols);		// Determine proposed new coordinates.
+						int anX = matrix_0[i][j]->getxLoc();		// Get dBug's proposed new x coordinate.
+						int anY = matrix_0[i][j]->getyLoc();		// Get dBug's proposed new y coordinate.
+						if (matrix_0[anX][anY] == 0) {			// Dont't call getName() on NULL Ptr!
 							matrix_0[anX][anY] = matrix_0[i][j];
 							matrix_0[i][j] = NULL;
 							matrix_0[anX][anY]->setSteps(1);
-							matrix_0[anX][anY]->setStarve(1);				// Didn't eat an Ant! Incur a starveStep!
+							matrix_0[anX][anY]->setStarve(1);	// Didn't eat an Ant! Incur a starveStep!
 
-							if (matrix_0[anX][anY]->getSteps() == 8) {		// Check for Breeding
+							if (matrix_0[anX][anY]->getSteps() == 8) {	// Check for Breeding
 								matrix_0[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_0[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -494,7 +493,7 @@ void Play::grid() {
 										matrix_0[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_0[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -505,15 +504,15 @@ void Play::grid() {
 							}
 						}
 						else if (matrix_0[anX][anY]->getName() == 'a') {	// Eat the Ant!
-							delete matrix_0[anX][anY];						// First delete the Ant.
-							matrix_0[anX][anY] = NULL;						// Set the pointer to NULL.
-							matrix_0[anX][anY] = matrix_0[i][j];			// Move the Doodlebug to the proposed location.
+							delete matrix_0[anX][anY];			// First delete the Ant.
+							matrix_0[anX][anY] = NULL;			// Set the pointer to NULL.
+							matrix_0[anX][anY] = matrix_0[i][j];		// Move the Doodlebug to the proposed location.
 							matrix_0[i][j] = NULL;
 							matrix_0[anX][anY]->setSteps(1);
-							matrix_0[anX][anY]->setStarve();				// Reset this DoodleBug's starveSteps to 0.
-							if (matrix_0[anX][anY]->getSteps() == 8) {		// Check for Breeding
+							matrix_0[anX][anY]->setStarve();		// Reset this DoodleBug's starveSteps to 0.
+							if (matrix_0[anX][anY]->getSteps() == 8) {	// Check for Breeding
 								matrix_0[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_0[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -537,7 +536,7 @@ void Play::grid() {
 										matrix_0[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_0[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -547,14 +546,14 @@ void Play::grid() {
 								}
 							}
 						}
-						else {												// New proposed location is another dBug,
-							matrix_0[i][j]->setxLoc(i);						// so we don't move.
+						else {							// New proposed location is another dBug,
+							matrix_0[i][j]->setxLoc(i);			// so we don't move.
 							matrix_0[i][j]->setyLoc(j);
 							matrix_0[anX][anY]->setSteps(1);
-							matrix_0[anX][anY]->setStarve(1);				// Didn't eat an ant! Incur a starveStep!
-							if (matrix_0[anX][anY]->getSteps() == 8) {		// Check for Breeding
+							matrix_0[anX][anY]->setStarve(1);		// Didn't eat an ant! Incur a starveStep!
+							if (matrix_0[anX][anY]->getSteps() == 8) {	// Check for Breeding
 								matrix_0[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_0[anX - 1][anY] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX - 1);
@@ -578,7 +577,7 @@ void Play::grid() {
 										matrix_0[anX + 1][anY] = dBug;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_0[anX][anY - 1] == 0) {
 										Doodlebug *dBug = new Doodlebug;
 										dBug->setxLoc(anX);
@@ -595,19 +594,19 @@ void Play::grid() {
 
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				if (matrix_0[i][j] != 0) {									// matrix_0 array element is a Critter.
-					if (matrix_0[i][j]->getName() == 'a') {					// Object is an Ant.
-						matrix_0[i][j]->move(i, j, rows, cols);				// Determine proposed new coordinates.
-						int anX = matrix_0[i][j]->getxLoc();				// Get Ant's proposed new x coordinate.
-						int anY = matrix_0[i][j]->getyLoc();				// Get Ant's proposed new y coordinate.
-						if (matrix_0[anX][anY] == 0) {						// Dont't call getName() on NULL Ptr!
+				if (matrix_0[i][j] != 0) {					// matrix_0 array element is a Critter.
+					if (matrix_0[i][j]->getName() == 'a') {			// Object is an Ant.
+						matrix_0[i][j]->move(i, j, rows, cols);		// Determine proposed new coordinates.
+						int anX = matrix_0[i][j]->getxLoc();		// Get Ant's proposed new x coordinate.
+						int anY = matrix_0[i][j]->getyLoc();		// Get Ant's proposed new y coordinate.
+						if (matrix_0[anX][anY] == 0) {			// Dont't call getName() on NULL Ptr!
 							matrix_0[anX][anY] = matrix_0[i][j];
 							matrix_0[i][j] = NULL;
 							matrix_0[anX][anY]->setSteps(1);
 
-							if (matrix_0[anX][anY]->getSteps() == 4) {		// Check for Breeding
+							if (matrix_0[anX][anY]->getSteps() == 4) {	// Check for Breeding
 								matrix_0[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {						// UP
 									if (matrix_0[anX - 1][anY] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX - 1);
@@ -631,7 +630,7 @@ void Play::grid() {
 										matrix_0[anX + 1][anY] = ant;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {					// LEFT
 									if (matrix_0[anX][anY - 1] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX);
@@ -641,13 +640,13 @@ void Play::grid() {
 								}
 							}
 						}
-						else {												// New proposed location is another Critter,
-							matrix_0[i][j]->setxLoc(i);						// so we don't move.
+						else {								// New proposed location is another Critter,
+							matrix_0[i][j]->setxLoc(i);				// so we don't move.
 							matrix_0[i][j]->setyLoc(j);
 							matrix_0[i][j]->setSteps(1);
 							if (matrix_0[anX][anY]->getSteps() == 4) {		// Check for Breeding
 								matrix_0[anX][anY]->setSteps();
-								if (anX != 0) {								// UP
+								if (anX != 0) {					// UP
 									if (matrix_0[anX - 1][anY] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX - 1);
@@ -655,7 +654,7 @@ void Play::grid() {
 										matrix_0[anX - 1][anY] = ant;
 									}
 								}
-								else if (anY != (cols - 1)) {				// RIGHT
+								else if (anY != (cols - 1)) {			// RIGHT
 									if (matrix_0[anX][anY + 1] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX);
@@ -663,7 +662,7 @@ void Play::grid() {
 										matrix_0[anX][anY + 1] = ant;
 									}
 								}
-								else if (anX != (rows - 1)) {				// DOWN
+								else if (anX != (rows - 1)) {			// DOWN
 									if (matrix_0[anX + 1][anY] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX + 1);
@@ -671,7 +670,7 @@ void Play::grid() {
 										matrix_0[anX + 1][anY] = ant;
 									}
 								}
-								else if (anY != 0) {						// LEFT
+								else if (anY != 0) {				// LEFT
 									if (matrix_0[anX][anY - 1] == 0) {
 										Ant *ant = new Ant;
 										ant->setxLoc(anX);
@@ -685,7 +684,7 @@ void Play::grid() {
 				}
 			}
 		}
-		// End matrix_0 build*************************************************************************************************
+		// End matrix_0 build********************************************************************************************
 
 		// Animation refresh rate.
 		usleep(timer);
@@ -819,7 +818,7 @@ string Play::cursorMover() {
 }
 
 /*******************************************************************************
-**							function pallete()
+**			function pallete()
 ** Takes an int argument for selected color and returns a string containing the
 ** ASCII escape codes for color and/or text decoration.  Should be used cout and
 ** followed by a default color reset in the same cout line. Ints outside of
@@ -831,112 +830,112 @@ string Play::palette(int color) {
 	string col;
 	switch (color) {
 	case 1:
-		col = "\033[0m";		// cout << "\033[0m" << "The default color.\n";
+		col = "\033[0m";	// cout << "\033[0m" << "The default color.\n";
 		break;
 	case 2:
-		col = "\033[7m";		// cout << "\033[7m" << "Background Default.\n";
+		col = "\033[7m";	// cout << "\033[7m" << "Background Default.\n";
 		break;
 	case 3:
-		col = "\033[4m";		// cout << "\033[4m" << "Underlined default.\n";
+		col = "\033[4m";	// cout << "\033[4m" << "Underlined default.\n";
 		break;
 	case 4:
-		col = "\033[1;37m";		// cout << "\033[1;37m" << "Bold White.\n";
+		col = "\033[1;37m";	// cout << "\033[1;37m" << "Bold White.\n";
 		break;
 	case 5:
 		col = "\033[1;4;37m";	// cout << "\033[4;37m" << "Underlined Bold White.\n";
 		break;
 	case 6:
-		col = "\033[0;31m";		// cout << "\033[0;31m" << "Red.\n";
+		col = "\033[0;31m";	// cout << "\033[0;31m" << "Red.\n";
 		break;
 	case 7:
-		col = "\033[7;31m";		// cout << "\033[7;31m" << "Background Red.\n";
+		col = "\033[7;31m";	// cout << "\033[7;31m" << "Background Red.\n";
 		break;
 	case 8:
 		col = "\033[0;4;31m";	// cout << "\033[0;4;31m" << "Underlined Red.\n";
 		break;
 	case 9:
-		col = "\033[1;31m";		// cout << "\033[1;31m" << "Bold Red.\n";
+		col = "\033[1;31m";	// cout << "\033[1;31m" << "Bold Red.\n";
 		break;
 	case 10:
 		col = "\033[4;1;31m";	// cout << "\033[4;31m" << "Underlined Bold Red.\n";
 		break;
 	case 11:
-		col = "\033[0;32m";		// cout << "\033[0;32m" << "Green.\n";
+		col = "\033[0;32m";	// cout << "\033[0;32m" << "Green.\n";
 		break;
 	case 12:
-		col = "\033[7;32m";		// cout << "\033[7;32m" << "Background Green.\n";
+		col = "\033[7;32m";	// cout << "\033[7;32m" << "Background Green.\n";
 		break;
 	case 13:
 		col = "\033[0;4;32m";	// cout << "\033[0;4;32m" << "Underlined Green.\n";
 		break;
 	case 14:
-		col = "\033[1;32m";		// cout << "\033[1;32m" << "Bold Green.\n";
+		col = "\033[1;32m";	// cout << "\033[1;32m" << "Bold Green.\n";
 		break;
 	case 15:
 		col = "\033[1;4;32m";	// cout << "\033[4;32m" << "Underlined Bold Green.\n";
 		break;
 	case 16:
-		col = "\033[0;33m";		// cout << "\033[0;33m" << "Yellow.\n";
+		col = "\033[0;33m";	// cout << "\033[0;33m" << "Yellow.\n";
 		break;
 	case 17:
-		col = "\033[7;33m";		// cout << "\033[7;33m" << "Background Yellow.\n";
+		col = "\033[7;33m";	// cout << "\033[7;33m" << "Background Yellow.\n";
 		break;
 	case 18:
 		col = "\033[0;4;33m";	// cout << "\033[0;4;33m" << "Underlined Yellow.\n";
 		break;
 	case 19:
-		col = "\033[1;33m";		// cout << "\033[1;33m" << "Bold Yellow.\n";
+		col = "\033[1;33m";	// cout << "\033[1;33m" << "Bold Yellow.\n";
 		break;
 	case 20:
 		col = "\033[1;4;33m";	// cout << "\033[4;33m" << "Underlined Bold Yellow.\n";
 		break;
 	case 21:
-		col = "\033[0;34m";		// cout << "\033[0;34m" << "Blue.\n";
+		col = "\033[0;34m";	// cout << "\033[0;34m" << "Blue.\n";
 		break;
 	case 22:
-		col = "\033[7;34m";		// cout << "\033[7;34m" << "Background Blue.\n";
+		col = "\033[7;34m";	// cout << "\033[7;34m" << "Background Blue.\n";
 		break;
 	case 23:
 		col = "\033[0;4;34m";	// cout << "\033[0;4;34m" << "Underlined Blue.\n";
 		break;
 	case 24:
-		col = "\033[1;34m";		// cout << "\033[1;34m" << "Bold Blue.\n";
+		col = "\033[1;34m";	// cout << "\033[1;34m" << "Bold Blue.\n";
 		break;
 	case 25:
 		col = "\033[1;4;34m";	// cout << "\033[4;34m" << "Underlined Bold Blue.\n";
 		break;
 	case 26:
-		col = "\033[0;35m";		// cout << "\033[0;35m" << "Magenta.\n";
+		col = "\033[0;35m";	// cout << "\033[0;35m" << "Magenta.\n";
 		break;
 	case 27:
-		col = "\033[7;35m";		// cout << "\033[7;35m" << "Background Magenta.\n";
+		col = "\033[7;35m";	// cout << "\033[7;35m" << "Background Magenta.\n";
 		break;
 	case 28:
 		col = "\033[0;4;35m";	// cout << "\033[0;4;35m" << "Underlined Magenta.\n";
 		break;
 	case 29:
-		col = "\033[1;35m";		// cout << "\033[1;35m" << "Bold Magenta.\n";
+		col = "\033[1;35m";	// cout << "\033[1;35m" << "Bold Magenta.\n";
 		break;
 	case 30:
 		col = "\033[1;4;35m";	// cout << "\033[4;35m" << "Underlined Bold Magenta.\n";
 		break;
 	case 31:
-		col = "\033[0;36m";		// cout << "\033[0;36m" << "Cyan.\n";
+		col = "\033[0;36m";	// cout << "\033[0;36m" << "Cyan.\n";
 		break;
 	case 32:
-		col = "\033[7;36m";		// cout << "\033[7;36m" << "Background Cyan.\n";
+		col = "\033[7;36m";	// cout << "\033[7;36m" << "Background Cyan.\n";
 		break;
 	case 33:
 		col = "\033[0;4;36m";	// cout << "\033[0;4;36m" << "Underlined Cyan.\n";
 		break;
 	case 34:
-		col = "\033[1;36m";		// cout << "\033[1;36m" << "Bold Cyan.\n";
+		col = "\033[1;36m";	// cout << "\033[1;36m" << "Bold Cyan.\n";
 		break;
 	case 35:
 		col = "\033[1;4;36m";	// cout << "\033[4;36m" << "Underlined Bold Cyan.\n";
 		break;
 	default:
-		col = "\033[0m";		// cout << "\033[0m" << "The default color.\n";
+		col = "\033[0m";	// cout << "\033[0m" << "The default color.\n";
 	}
 	return col;
 }

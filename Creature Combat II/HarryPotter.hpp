@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: HarryPotter.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: HarryPotter child class declaration file.
 *****************************************************************************************/
@@ -14,11 +14,11 @@ class HarryPotter : public Creature {
 private:
 
 protected:
-	int strength;		// 10
-	int numDie;			//  2
-	int dieSides;		//  6
-	int armor;			//  0
-	int deadOnce;		//  0
+	int strength;	// 10
+	int numDie;	//  2
+	int dieSides;	//  6
+	int armor;	//  0
+	int deadOnce;	//  0
 	int player;
 	string name;
 	string type;

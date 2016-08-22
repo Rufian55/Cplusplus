@@ -4,7 +4,7 @@ using std::cin;
 using std::cout;
 
 /************************************************************************
-*		rfactorial() Non Tail Recursive (From Lab 10 Specs)				*
+*	rfactorial() Non Tail Recursive					*
 *************************************************************************/
 long long Recursions::rfactorial(int n) {
 	if (n == 1)
@@ -15,7 +15,7 @@ long long Recursions::rfactorial(int n) {
 
 
 /************************************************************************
-*		factorial() Tail Recursive (From Lab 10 Specs)					*
+*		factorial() Tail Recursive				*
 *************************************************************************/
 long long Recursions::factorial(int n) {
 	return factorialHelper(n, 1);
@@ -23,7 +23,7 @@ long long Recursions::factorial(int n) {
 
 
 /************************************************************************
-*		Tail Recursion Helper Function (From Lab 10 Specs)				*
+*	Tail Recursion Helper Function					*
 *************************************************************************/
 long long Recursions::factorialHelper(int n, int result) {
 	if (n == 1)
@@ -33,7 +33,7 @@ long long Recursions::factorialHelper(int n, int result) {
 }
 
 /************************************************************************
-*			User choice collection Function collect_1()					*
+*	User choice collection Function collect_1()			*
 *************************************************************************/
 int Recursions::collect_1(int low, int high) {
 	int choice;
@@ -50,7 +50,7 @@ int Recursions::collect_1(int low, int high) {
 }
 
 /************************************************************************
-*			User choice collection Function collect_2()					*
+*	   User choice collection Function collect_2()			*
 *************************************************************************/
 int Recursions::collect_2(int low, int high) {
 	int choice;

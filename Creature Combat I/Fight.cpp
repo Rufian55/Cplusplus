@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Fight.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Fight class implementation file. Utilizes virtual class Creature, then 
 ** Medusa, Barbarian, Vampire, blueMen, and GarryPotter classes.
@@ -28,14 +28,14 @@ using std::string;
 #include<sstream>
 
 int main() {
-	srand(time(NULL));			// Seed for roll rand functions.
-	int attackResult;			// Intermediate attack result.
-	int choice;					// Local user creature choice.
+	srand(time(NULL));		// Seed for roll rand functions.
+	int attackResult;		// Intermediate attack result.
+	int choice;			// Local user creature choice.
 //	Fight *fight = new Fight;	// A new fight!
 	Creature *theRing[2];		// The fighting ring with room for two Creatures!
-	string p1name;				// Local naming var for creature picked by Player 1.
-	string p2name;				// Local naming var for creature picked by Player 2.
-	int rounds;					// round counter for "Fight to the Death".
+	string p1name;			// Local naming var for creature picked by Player 1.
+	string p2name;			// Local naming var for creature picked by Player 2.
+	int rounds;			// round counter for "Fight to the Death".
 
 	// Main menu loop for Player 1 creature selection.
 	cout << "Welcome to Creature Combat!" << endl << endl;

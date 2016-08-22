@@ -1,8 +1,8 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 03/15/2016
 # File: makefile
-# Description: makefile for Final Assign. CS162-400-W16. 
+# Description: makefile for ThrowBack. 
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.
@@ -68,11 +68,11 @@ PROGS = ${PROG1}
 
 # This is the name of your document(s). 
 # Edit as needed.
-#DOC = cs162_400_w16_kearnsc_final_project.pdf
+#DOC = editMe.pdf
 
 # This is the name of your tar/compressed file. 
 # Edit name as needed. Keep the format.
-TAR = cs162_assignment1_kearnsc.tar.bz2
+TAR = editMe.tar.bz2
 
 #####################
 ### BUILD SECTION ###
@@ -90,7 +90,7 @@ all:
 
 # Typing 'make zip' in terminal creates a zip file of the project.
 zip:
-	zip cs162_400_w16_kearnsc_final.zip *.cpp *.hpp *.pdf makefile throwback
+	zip throwBack.zip *.cpp *.hpp *.pdf makefile throwback
 
 # TAR
 # Typing 'make tar' in terminal calls this build.

@@ -2,7 +2,7 @@
 # Author: Chris Kearns (kearnsc)
 # Date: 01/31/2016
 # File: Makefile
-# Description: makefile for assignment2 CS162-400-W16. 
+# Description: makefile for Grocery List Program.
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.

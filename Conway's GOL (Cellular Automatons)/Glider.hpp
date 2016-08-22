@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Glider.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Header file for Glider.cpp.
 ** Input:
@@ -11,4 +11,4 @@
 
 void glider(int anyArray[]);
 
-#endif //!GLIDER_HPP
+#endif

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Critter.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Base class declaration file.
 *****************************************************************************************/
@@ -25,4 +25,4 @@ public:
 	virtual int getyLoc() { return 0; }
 	int getRand();
 };
-#endif // !CRITTER_HPP
+#endif

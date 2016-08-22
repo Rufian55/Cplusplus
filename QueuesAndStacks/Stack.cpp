@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Stack.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Stack class implementation file.
 ** Input:
@@ -37,15 +37,15 @@ void Stack::add(int num) {
 ****************************************************************************************/
 int Stack::remove(int &num) {
 
-	StackNode *temp;									// Declare StackNode type pointer.
+	StackNode *temp;					// Declare StackNode type pointer.
 
 	if (isEmpty()) {
 		cout << "The stack is empty!" << endl << endl;
-	}else{												// Remove value off top of stack.
-		num = top->var;									// num is set to the removed var via pointer.
-		temp = top;										// temp-orarily assign as the top pointer.
-		top = top->next;								// Assign top the "next" pointer.
-		delete temp;									// Delete the temp (just removed pointer).
+	}else{							// Remove value off top of stack.
+		num = top->var;					// num is set to the removed var via pointer.
+		temp = top;					// temp-orarily assign as the top pointer.
+		top = top->next;				// Assign top the "next" pointer.
+		delete temp;					// Delete the temp (just removed pointer).
 	}
 }
 
@@ -58,7 +58,7 @@ int Stack::remove(int &num) {
 ** Post-Conditions:
 ****************************************************************************************/
 bool Stack::isEmpty() {
-	if (!top) {										// is top pointer set to NULL?
+	if (!top) {						// is top pointer set to NULL?
 		return true;
 	}else{
 		return false;

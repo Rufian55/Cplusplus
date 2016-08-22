@@ -79,7 +79,7 @@ int Recursion::sumArray(int anArray[], int len) {
 /***************************************************************************************
 ** Function: triNum(int);
 ** Description: Calculates the triangle number for the input int, similar to a bowling
-** pin triangle. So, int n = 5 would return 5+4+3+2+1, but does so recurseively with the
+** pin triangle. So, int n = 5 would return 5+4+3+2+1, but does so recursively with the
 ** recursive call (s - 1) parameter. 
 ** Parameters: int n
 ** Pre-Conditions: an int.
@@ -107,9 +107,9 @@ int main() {
 	int choice = 0;		// Main menu flow control var.
 	string aString;		// Local user input collector string.
 	int numInts;		// Local user input for number of ints to enter for sumArray();
-	int newInt;			// Indivdual ints entered by user for sumArray();
-	int count;			// Counter for input to sumArray();
-	int anInt;			// Local user input collector for Triangle Number for triNum();
+	int newInt;		// Indivdual ints entered by user for sumArray();
+	int count;		// Counter for input to sumArray();
+	int anInt;		// Local user input collector for Triangle Number for triNum();
 	Recursion cursion;	// Initialize a Recursion object.
 
 	// Main menu.

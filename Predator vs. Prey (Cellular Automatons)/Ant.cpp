@@ -1,11 +1,10 @@
 /****************************************************************************************
 ** Program Filename: Ant.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Ant class implementation file.
 *****************************************************************************************/
 #include "Ant.hpp"
-
 
 /***************************************************************************************
 ** Function: move()
@@ -15,11 +14,11 @@
 ** Pre-Conditions: Runs on Linux console.
 ** Post-Conditions: Should ultimately reset objects x and y coordiantes on the grid.
 ****************************************************************************************/
-void Ant::move(int i, int j, int rows, int cols) {			// i is current x-axis location, j is y-axis location.
-									// rows and cols is grid size as per user.
-	int dir = getRand();						// getRand() returns random 1, 2, 3, or 4.
-	int x = getxLoc();						// x-axis location var currently stored in object.
-	int y = getyLoc();						// y-axis location var currently stored in object.
+void Ant::move(int i, int j, int rows, int cols) {	// i is current x-axis location, j is y-axis location.
+							// rows and cols is grid size as per user.
+	int dir = getRand();				// getRand() returns random 1, 2, 3, or 4.
+	int x = getxLoc();				// x-axis location var currently stored in object.
+	int y = getyLoc();				// y-axis location var currently stored in object.
 
 	//UP
 	if (dir == 1 && (i != 0)) {

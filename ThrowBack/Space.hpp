@@ -23,14 +23,14 @@ public:
 	int go2Room();
 	string palette(int);
 
-/*	virtual bool getPPBlue() {};
+	virtual bool getPPBlue() {};
 	virtual bool getPPYellow() {};
 	virtual bool getPPCyan() {};
 	virtual bool getPPGreen() {};
 	virtual bool getPPRed() {};
 	virtual bool getPPMagenta() {};
 	virtual bool getPPWhite() {};
-*/
+
 	virtual void setStrength(int) {};		// Local Room
 	virtual int getStrength() {};			// Local Room
 	virtual int acceptStrength(int) {};		// From Throwback strength.

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Play.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Play class implementation file. Utilizes virtual class Critter, then Ant
 ** and Doodlbug classes.

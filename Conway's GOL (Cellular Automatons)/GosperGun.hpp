@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: GosperGun.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Header file for GosperGun.cpp.
 ** Input:
@@ -11,4 +11,4 @@
 
 void gosperGun(int anArray[]);
 
-#endif //!GOSPERGUN_HPP
+#endif

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Stack.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/06/2016
 ** Description: STL Stack class declaration file.
 ** Input:
@@ -16,4 +16,4 @@ public:
 	bool isPalin(string);
 	string palinBuilder(string);
 };
-#endif // !STACK_HPP
+#endif

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Queue.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: Queue class implementation file for a circular doubly linked linked list
 ** that recylecs empty nodes from the front to the back.
@@ -66,28 +66,28 @@ void Queue::addBack(int data) {
 	if (front == back && back->data == -1) {		// back is empty so get on the queue!
 		back->data = data;
 	}
-	else if (front == back && back->data != -1) {	// Queue has 1 node, and it's full so
-		struct QueueNode * aNode;				// we add a new node and passing data
-		aNode = makeNode(data);					// to it, adjusting pointers to retain
-		aNode->next = front;					// circular doubly linked list.
+	else if (front == back && back->data != -1) {		// Queue has 1 node, and it's full so
+		struct QueueNode * aNode;			// we add a new node and passing data
+		aNode = makeNode(data);				// to it, adjusting pointers to retain
+		aNode->next = front;				// circular doubly linked list.
 		front->prev = aNode;
 		back = aNode;
 		front->next = back;
 		back->prev = front;
 	}
-	else if (front != back && back->data == -1) {	// More than one node, but back is empty.
+	else if (front != back && back->data == -1) {		// More than one node, but back is empty.
 		back->data = data;
 	}
 	else if (front != back && back->data != 1) {		// More than one node, back is full, so
-		if (getFront() == -1) {					// we check if there is an empty one
-			front = front->prev;				// on the front and recycle it if so!
+		if (getFront() == -1) {				// we check if there is an empty one
+			front = front->prev;			// on the front and recycle it if so!
 			back = back->prev;
 			back->data = data;
 		}
-		else {								// We have >1 node, back & front are full,
-			struct QueueNode * aNode;			// so we add a node and assign data to it
-			aNode = makeNode(data);				// and adjust pointers to retain the 
-			aNode->next = back;					// circularly doubly linked list.
+		else {						// We have >1 node, back & front are full,
+			struct QueueNode * aNode;		// so we add a node and assign data to it
+			aNode = makeNode(data);			// and adjust pointers to retain the 
+			aNode->next = back;			// circularly doubly linked list.
 			back->prev = aNode;
 			back = aNode;
 			front->next = back;

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Ant.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Ant class declaration file.
 *****************************************************************************************/
@@ -32,4 +32,4 @@ public:
 	int getxLoc();
 	int getyLoc();
 };
-#endif // !ANT_HPP
+#endif

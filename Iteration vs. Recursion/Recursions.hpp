@@ -3,9 +3,7 @@
 
 class Recursions {
 private:
-
 public:
-
 public:
 	long long rfactorial(int);
 	long long factorialHelper(int, int);
@@ -13,4 +11,4 @@ public:
 	int collect_1(int, int);
 	int collect_2(int, int);
 };
-#endif // !RECURSIONS_HPP
+#endif

@@ -1,8 +1,8 @@
 /****************************************************************************************
 ** Program Filename: Stack.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
-** Description: Stack class implementation file for Creatuer objects.
+** Description: Stack class implementation file for Creature objects.
 *****************************************************************************************/
 #include "Stack.hpp"
 #include<iostream>
@@ -16,7 +16,7 @@ using std::endl;
 ** the *top pointer pointed at it.  See StackNode constructor definition in Stack.hpp.
 ** Parameters: int.
 ** Pre-Conditions: Must have instantiated a Stack in driver program to uilize.
-** Post-Conditions: A pointer to a Creatuer object is added to the stack. 
+** Post-Conditions: A pointer to a Creature object is added to the stack. 
 ****************************************************************************************/
 void Stack::add(Creature *aCreature) {
 	top = new StackNode(aCreature, top);
@@ -34,15 +34,15 @@ void Stack::add(Creature *aCreature) {
 ** Post-Conditions:
 ****************************************************************************************/
 Creature* Stack::remove() {
-	StackNode *temp;								// Declare StackNode type pointer.
+	StackNode *temp;					// Declare StackNode type pointer.
 	if (isEmpty()) {
 		cout << "The stack is empty!" << endl << endl;
 	}
-	else {										// Remove value off top of stack.
-		Creature* Cret = top->aCreature;				// Cret is set to the removed var via pointer.
-		temp = top;								// temp-orarily assign as the top pointer.
-		top = top->next;							// Assign top the "next" pointer.
-		delete temp;								// Delete the temp (just removed pointer).
+	else {							// Remove value off top of stack.
+		Creature* Cret = top->aCreature;		// Cret is set to the removed var via pointer.
+		temp = top;					// temp-orarily assign as the top pointer.
+		top = top->next;				// Assign top the "next" pointer.
+		delete temp;					// Delete the temp (just removed pointer).
 		return Cret;
 	}
 }
@@ -56,7 +56,7 @@ Creature* Stack::remove() {
 ** Post-Conditions:
 ****************************************************************************************/
 bool Stack::isEmpty() {
-	if (!top) {									// is top pointer set to NULL?
+	if (!top) {						// is top pointer set to NULL?
 		return true;
 	}else{
 		return false;

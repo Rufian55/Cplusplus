@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Main.cpp
-** Author: Chris Kearns (CS-162-400 W2016 LAB_6)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Stack and Queue class demonstration file that initializes and
 ** manipulates a stack and a queue with respective add and remove functions.
@@ -18,15 +18,15 @@ using std::cout;
 using std::endl;
 
 int main() {
-	int answer;					// Local cin collection var.
-	int choice;					// Local cin collection var
+	int answer;				// Local cin collection var.
+	int choice;				// Local cin collection var
 	int removedVar;				// Used to collect and cout stack variables.
 	int removedVar1;			// Used for dual removal in Manual Section.
 	int removedVar2;			// Used for dual removal in Manual Section.
-	int i;						// for loop control var.
-	int aVar;					// Used to collect and cout queue variables.
-	int anInt;					// Used to add ints to chrisStack and chrisQueue in Manual Section.
-	string manControl = "n";	// Manaul Section while loop quit control var.
+	int i;					// for loop control var.
+	int aVar;				// Used to collect and cout queue variables.
+	int anInt;				// Used to add ints to chrisStack and chrisQueue in Manual Section.
+	string manControl = "n";		// Manaul Section while loop quit control var.
 
 	// Demonstrate Stack FIFO operation! 
 	Stack chrisStack;

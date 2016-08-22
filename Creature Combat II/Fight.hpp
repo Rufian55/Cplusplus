@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Fight.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: Fight class declaration file.
 ** Input:

@@ -12,19 +12,19 @@ using std::endl;
 
 
 int main() {
-	int anInt;			// Utility int for reading in ints.
+	int anInt;		// Utility int for reading in ints.
 	int count = 0;		// Utiltiy var for determining number of ints in txt file.
 	fstream inFile;		// Our input stream for reading.
 	fstream inFile2;	// Our second input stream object.
 	fstream outFile;	// Our output stream for writing.
 	SearchSort my;		// A SearchSort object!
-	int i;				// For loop utility var.
-	int seek;			// The Int we seek.
-	int result;			// The subscript location returned.
-	int file;			// Which file to read cin collection var.
+	int i;			// For loop utility var.
+	int seek;		// The Int we seek.
+	int result;		// The subscript location returned.
+	int file;		// Which file to read cin collection var.
 	string fileName;	// Utility string for reading in user file to write to.
-	int check;			// Utiliy user menu control var for cin collection.
-	int sorter;			// Utility user menu control var for which sort algorithm to use.
+	int check;		// Utiliy user menu control var for cin collection.
+	int sorter;		// Utility user menu control var for which sort algorithm to use.
 
 	// USER MENU FOR SEARCH
 	cout << endl << "WELCOME TO THE SEARCH DEMO!" << endl << endl
@@ -80,7 +80,7 @@ int main() {
 			inFile >> anInt;
 			count++;
 		}
-		inFile.clear();					// Clear EOF flag
+		inFile.clear();				// Clear EOF flag
 		inFile.seekg(0L, ios::beg);		// Rewind txt file to beginning.
 
 		// Our holding array for read in int values from the text file.
@@ -163,7 +163,7 @@ int main() {
 			inFile >> anInt;
 			count++;
 		}
-		inFile.clear();					// Clear EOF flag
+		inFile.clear();				// Clear EOF flag
 		inFile.seekg(0L, ios::beg);		// Rewind txt file to beginning.
 
 		// Our holding array for read in int values from the text file.
@@ -242,7 +242,7 @@ int main() {
 			while (inFile2 >> anInt) {
 				count++;
 			}
-			inFile2.clear();					// Clear EOF flag
+			inFile2.clear();			// Clear EOF flag
 			inFile2.seekg(0L, ios::beg);		// Rewind txt file to beginning.
 
 			// Our holding array for read in int values from the text file.

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Space.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/13/2016
 ** Description: Space abstract class declaration file.
 *****************************************************************************************/

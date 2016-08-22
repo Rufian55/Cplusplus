@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Items.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/26/2016
 ** Description: Items class implementation file.
 ** Input: All input originates from List.cpp

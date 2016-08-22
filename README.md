@@ -1,2 +1,2 @@
 # C++
-Conway's Game of Life - Gosper Gun, Glider, Jan Kock's Galaxy.
+Conway's Game of Life - Gosper Gun, Glider, Jan Kok's Galaxy (Oscillator.cpp).

@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Main.cpp
-** Author: Chris Kearns (CS-162-400 W2016 LAB_6)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: Queue class demonstration file that initializes and manipulates a doubly
 ** linked circular Queue with respective addBack() getFront() and removeFront() functions.

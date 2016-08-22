@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Harrypotter.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: HarryPotter class implementation file.
 *****************************************************************************************/
@@ -57,18 +57,6 @@ int HarryPotter::roll(string aORd){
 
 	dSides = getDieSides();
 	die = getNumDie();
-
-	/*	if (aORd == "A") {
-		dSides = getDieSides();
-		die = getNumDie();
-	}
-	else {
-		if (aORd == "D" || aORd == "H") {
-			dSides = getDieSides();
-			die = getNumDie();
-		}
-	}
-*/
 
 	for (i = 1; i < dSides + 1; i++) {
 		roller.push_back(i);

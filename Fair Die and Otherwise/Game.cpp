@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Game.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/24/2016
 ** Description: Implementation file for Game class - includes main().
 ** Input: all user input, Player, LoadedDie, and Die objects.
@@ -19,7 +19,7 @@ using std::setw;
 #include<ctime>
 
 /***************************************************************************************
-** Function: createPlayer()
+** Function: createGame()
 ** Description: Constructor to set roundsToPlay for the Game object.
 ** Parameters: int roundsToPlay.
 ** Pre-Conditions: Runs on Linux console.
@@ -44,7 +44,7 @@ int Game::getRoundsToPlay(){
 // GAME PLAY, I/O FLOW, COLLECT USER INPUT. 
 int main() {
 	int rtp;		// local user input collector var for roundsToPlay.
-	string name;	// Local user input collector var for name.
+	string name;		// Local user input collector var for name.
 	int td;			// Local user input collector var for typeDie.
 	string dt;		// Local var for cout typeDie string in Scoreboard. 
 	int ns;			// Local user input collector var for (die) sides.

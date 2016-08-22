@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Main.cpp
-** Author: Chris Kearns (CS-162-400 W2016 LAB_9)
+** Author: Chris Kearns
 ** Date: 3/06/2016
 ** Description: STL Stack and STL Queue class demonstration file that initializes and
 ** manipulates a stack used as a palindrome string generator and a buffer queue with 
@@ -26,7 +26,6 @@ using std::setprecision;
 using std::queue;
 
 
-// A much shorter main!
 int main() {
 	srand(time(0));
 	double pctPut;

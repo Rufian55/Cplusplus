@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Player.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/24/2016
 ** Description: Implementation file for Player class.
 ** Input: int typeDice, string name, int score, int roundsWon.
@@ -15,7 +15,7 @@
 ** Pre-Conditions: Runs on Linux console.
 ** Post-Conditions: void, sets typeDice, name, score, and roundsWon for Player object.
 ****************************************************************************************/
-void Player::createPlayer(int typeDice, string name){
+void Player::createPlayer(int typeDice, string name) {
 	setTypeDice(typeDice);
 	setName(name);
 	setScore(0);
@@ -23,18 +23,18 @@ void Player::createPlayer(int typeDice, string name){
 }
 
 // Setter for typeDice var.
-void Player::setTypeDice(int td){
+void Player::setTypeDice(int td) {
 	typeDice = td;
 }
 
 // Getter for typeDice var.
-int Player::getTypeDice(){
+int Player::getTypeDice() {
 	int td = typeDice;
 	return td;
 }
 
 // Setter for name var.
-void Player::setName(string aname){
+void Player::setName(string aname) {
 	name = aname;
 }
 
@@ -45,12 +45,12 @@ string Player::getName(){
 }
 
 // Setter for score var (each individual round).
-void Player::setScore(int sc){
+void Player::setScore(int sc) {
 	score = sc;
 }
 
 // Getter for score var (each individual round).
-int Player::getScore(){
+int Player::getScore() {
 	int sc = score;
 	return sc;
 }
@@ -61,7 +61,7 @@ void Player::setRoundsWon(double rw) {
 }
 
 // Getter for roundsWon var.
-double Player::getRoundsWon(){
+double Player::getRoundsWon() {
 	double rw = roundsWon;
 	return rw;
 }

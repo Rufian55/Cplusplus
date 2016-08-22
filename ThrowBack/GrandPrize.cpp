@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: GrandPrize.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/17/2016
 ** Description: Contains the grandPrize() function.
 ** Input: array "collector"
@@ -24,16 +24,16 @@ using std::endl;
 ****************************************************************************************/
 void GrandPrize::grandPrize() {
 	int univRows, winRows, univCols, winCols;
-	univRows = 60;									// Row bounds of our Universe.
-	winRows = 40;									// Row bounds of our Window.
-	univCols = 40;									// Column bounds of our Universe.
-	winCols = 20;									// Column bounds of our Window.
-	int time = 50000 * 2;							// Time between iterations.
-	int iterations = 19;							// Iterations desired by user.
-	int aliveCount = 0;								// Counter to determine cell state.
-	int xOffset = 20;								// x axis offset for initial image.
-	int yOffset = 20;								// y-axis offset for inital image.
-	std::string matrix_0[univRows][univCols];		// Our initial Universe array matrix_0 - all cells dead.
+	univRows = 60;					// Row bounds of our Universe.
+	winRows = 40;					// Row bounds of our Window.
+	univCols = 40;					// Column bounds of our Universe.
+	winCols = 20;					// Column bounds of our Window.
+	int time = 50000 * 2;				// Time between iterations.
+	int iterations = 19;				// Iterations desired by user.
+	int aliveCount = 0;				// Counter to determine cell state.
+	int xOffset = 20;				// x axis offset for initial image.
+	int yOffset = 20;				// y-axis offset for inital image.
+	std::string matrix_0[univRows][univCols];	// Our initial Universe array matrix_0 - all cells dead.
 
 	// Fill matrix_0 with " "
 	for (int i = 0; i < univRows; i++) {
@@ -107,7 +107,7 @@ void GrandPrize::grandPrize() {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_0[i - 1][j - 1] == "*")	// Top left.
 					aliveCount++;
@@ -170,7 +170,7 @@ void GrandPrize::grandPrize() {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_1[i - 1][j - 1] == "*")	// Top left.
 					aliveCount++;
@@ -221,7 +221,7 @@ void GrandPrize::grandPrize() {
 		usleep(time);
 
 		// Move cursor up above matrix_1 rendering, clear console, user message!
-		cout << "\033[41A" << palette(19) << "\tYou are the winner!! For Spring Break, YOU"
+		cout << "\033[41A" << palette(19) << "\tYou are the winner!! For Two Full Weeks, YOU"
 			<< " are Ruler of the Galaxy!" << palette(1) << "\n";
 	} // End animation loop.
 	cout << palette(1) << "\033[60B";

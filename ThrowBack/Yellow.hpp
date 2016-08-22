@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Yellow.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/13/2016
 ** Description: Yellow abstract class declaration file.
 *****************************************************************************************/
@@ -41,7 +41,7 @@ public:
 	~Yellow();
 	void setStrength();
 	virtual void setStrength(int);		// Local Overload.
-	virtual int getStrength();			// Local strength.
+	virtual int getStrength();		// Local strength.
 	virtual int acceptStrength(int);	// From Throwback strength.
 
 	void setPPYellow(bool);
@@ -50,7 +50,7 @@ public:
 	void initCharBools();
 
 	virtual int runRoom();
-	virtual void boostStrength(); // Special Pure Virtual Function! 
+	virtual void boostStrength(); 		// Special Pure Virtual Function! 
 	int runCharacters();
 	int runController(int);
 	int playerAI();

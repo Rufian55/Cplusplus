@@ -1,9 +1,9 @@
 /****************************************************************************************
 ** Program Filename: Fight.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: Fight class implementation file. Utilizes virtual class Creature, then 
-** Medusa, Barbarian, Vampire, blueMen, and HarryPotter classes.
+** Medusa, Barbarian, Vampire, BlueMen, and HarryPotter classes.
 ** Input: user, various functions from Creature, Medusa, Barbarain, Vampire, BlueMen,
 ** HarryPotter, Stack, and Queue.
 ** Output:	to console.
@@ -30,13 +30,13 @@ using std::string;
 int main() {
 	srand(time(0));				// Seed for roll rand functions.
 	int attackResult;			// Intermediate attack result.
-	int choice;					// Local user creature choice cin collection var.
+	int choice;				// Local user creature choice cin collection var.
 	int displaySB;				// Local Display Score Board option cin collection var.
-	Creature *theRing[2];		// The fighting ring with room for two Creatures!
+	Creature *theRing[2];			// The fighting ring with room for two Creatures!
 	Creature *cret;				// Utiltity pointer for swapping Creatures around!
 	string name;				// Local naming var for setting creature's name.
 	string type;				// Local var for setting Creature object's type designator.
-	int player;					// Local player id for assigning Creature to Player (1or2)
+	int player;				// Local player id for assigning Creature to Player (1or2)
 	int mRounds = 1;			// Individual match round counter for "Fight to the Death" to stop infinite loops.
 	int tRounds = 1;			// Tournament rounds - increments until one of the queues is empty.
 	Queue fighters1;			// Player 1 fighters lineup.
@@ -44,10 +44,10 @@ int main() {
 	Stack losers;				// Losers pile (both Player's losers stacked here).
 	Stack losersHOH;			// Losers mirror pile for dispaly losers Hall Of Honor in FILO order option.
 	int cLosersHOH;				// Local cin collection var for display Hall of Honor option.
-	int cAll;					// Local cin var to display all fighters option.
+	int cAll;				// Local cin var to display all fighters option.
 	int numPlayer;				// Local cin var for number of players per team.
-	int i = 0;					// Local for loop control var.
-	int j = 0;					// Local for loop control var.
+	int i = 0;				// Local for loop control var.
+	int j = 0;				// Local for loop control var.
 	string ess = "!";			// Trailing 's' on Creature(s).
 	int cScore = 0;				// Individual Creatures score (accumulated healed score after each round.
 	int p1score = 0;			// Player 1's team score, accumulated from each individual cScore.
@@ -58,8 +58,8 @@ int main() {
 	int p2_L = 0;				// Player 2's total losses accumulator.
 	int tWinner;				// Local var for Which team won the tournament.
 	int size = 0;				// Local var for sorting standings array.
-	Fight my;					// A fight object so we can run sorting algorithms.
-	string aP;					// Used for Awarding medals Posthumously.
+	Fight my;				// A fight object so we can run sorting algorithms.
+	string aP;				// Used for Awarding medals Posthumously.
 	int determine;				// Local collection var for user to choose W-L or points for decision!
 	string determ;				// For cout of which determine method user decided upon.
 
@@ -259,26 +259,26 @@ int main() {
 			mRounds++;
 
 			/* Winners are healed and recycled to the back of their respective (fighters1 or 2) queue.
-			   Losers are sent to the 'losers' stack. Micro code commented for grader clarity. */
-			if(theRing[0]->checkPulse() == false){					// Player 2's Creature has won the Tournament Match Round.
-				losers.add(theRing[0]);								// Add theRing[0] Creature* to the loser stack.
-				losersHOH.add(theRing[0]);							// Also add theRing[0] Creature* to the mirror stack.
-				theRing[1]->healer();								// Call healer() on the winning Creature.
-				theRing[1]->setcScore(theRing[1]->getStrength());	// Winner scores it's remaining strength points.
-				p2score += theRing[1]->getStrength();				// Player 2's team score accumulates tRound winner's score.
-				p2_W++;												// Player 2's team earns a win.
-				p1_L++;												// Player 1's team incurs a loss.
-				fighters2.add(theRing[1]);							// Add theRing[1] Creature* to the back of fighters2 queue.
+			   Losers are sent to the 'losers' stack. Micro code commented for clarity. */
+			if(theRing[0]->checkPulse() == false){			  // Player 2's Creature has won the Tournament Match Round.
+				losers.add(theRing[0]);				  // Add theRing[0] Creature* to the loser stack.
+				losersHOH.add(theRing[0]);			  // Also add theRing[0] Creature* to the mirror stack.
+				theRing[1]->healer();				  // Call healer() on the winning Creature.
+				theRing[1]->setcScore(theRing[1]->getStrength()); // Winner scores it's remaining strength points.
+				p2score += theRing[1]->getStrength();		  // Player 2's team score accumulates tRound winner's score.
+				p2_W++;						  // Player 2's team earns a win.
+				p1_L++;						  // Player 1's team incurs a loss.
+				fighters2.add(theRing[1]);			  // Add theRing[1] Creature* to the back of fighters2 queue.
 			}else{
-				if (theRing[1]->checkPulse() == false) {				// Player 1's Creature has won the Tournament Match Round.
-					losers.add(theRing[1]);								// Add theRing[1] Creature* to the loser stack.
-					losersHOH.add(theRing[1]);							// Also add theRing[1] Creature* to the mirror stack.
-					theRing[0]->healer();								// Call healer() on the winning Creature.
-					theRing[0]->setcScore(theRing[0]->getStrength());	// Winner scores it's remaining strength points.
-					p1score += theRing[0]->getStrength();				// Player 1's team score accumulates tRound winner's score.
-					p1_W++;												// Player 1's team earns a win.
-					p2_L++;												// Player 2's team incurs a loss.
-					fighters1.add(theRing[0]);							// Add theRing[0] Creature* to the back of fighters1 queue.
+				if (theRing[1]->checkPulse() == false) {	  // Player 1's Creature has won the Tournament Match Round.
+					losers.add(theRing[1]);			  // Add theRing[1] Creature* to the loser stack.
+					losersHOH.add(theRing[1]);		  // Also add theRing[1] Creature* to the mirror stack.
+					theRing[0]->healer();			  // Call healer() on the winning Creature.
+					theRing[0]->setcScore(theRing[0]->getStrength()); // Winner scores it's remaining strength points.
+					p1score += theRing[0]->getStrength();	  // Player 1's team score accumulates tRound winner's score.
+					p1_W++;					  // Player 1's team earns a win.
+					p2_L++;					 // Player 2's team incurs a loss.
+					fighters1.add(theRing[0]);		  // Add theRing[0] Creature* to the back of fighters1 queue.
 				}
 			}
 
@@ -318,8 +318,10 @@ int main() {
 							<< " Winner, scoring " << theRing[0]->getStrength() << endl
 							<< " points for themselves and their team!" << endl;
 					}
-					cout << "Player 1's Win-Loss Record is " << p1_W << "-" << p1_L << " with Team Points: " << p1score << "." <<  endl;
-					cout << "Player 2's Win-Loss Record is " << p2_W << "-" << p2_L << " with Team Points: " << p2score << "." << endl;
+					cout << "Player 1's Win-Loss Record is " << p1_W << "-" << p1_L << " with Team Points: " 
+						<< p1score << "." <<  endl;
+					cout << "Player 2's Win-Loss Record is " << p2_W << "-" << p2_L << " with Team Points: " 
+						<< p2score << "." << endl;
 				}
 			}
 			cout << endl;

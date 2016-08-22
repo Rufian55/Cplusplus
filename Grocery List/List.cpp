@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: List.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/26/2016
 ** Description: List class implementation file.
 ** Input: User input in main, Items.cpp cout for item object var values, various Items
@@ -60,17 +60,17 @@ void List::addItem(Items anItem) {
 		if (anItem.getName() == aList[i].getName())		// operator== overload.
 			sentinal = 1;
 	}
-	if (sentinal == 0) {								// Dynamic Array has room?
-		if ((numItems < (sizeArray - 1))) {				// Yes, but early resize mandatory!!
-			aList[numItems] = anItem;					// See removeItem() line 100.
+	if (sentinal == 0) {						// Dynamic Array has room?
+		if ((numItems < (sizeArray - 1))) {			// Yes, but early resize mandatory!!
+			aList[numItems] = anItem;			// See removeItem() line 100.
 			numItems++;
 		}
-		else {											// Resize array for next object.
+		else {							// Resize array for next object.
 			Items* temp = new Items[sizeArray * 2];
 			for (int i = 0; i < numItems; i++)
 				temp[i] = aList[i];
-			delete[]aList;								// Delete the too small array.
-			aList = temp;								// Repoint *aList
+			delete[]aList;					// Delete the too small array.
+			aList = temp;					// Repoint *aList
 			aList[numItems] = anItem;
 			sizeArray *= 2;
 			numItems++;
@@ -95,9 +95,9 @@ void List::removeItem(int rem){
 		cout << endl << "There are no items on your list" << endl;
 	}
 	else {
-		int idx = rem - 1;	// - 1 to align index var 'rem' wtih object location in array.
+		int idx = rem - 1;			// - 1 to align index var 'rem' wtih object location in array.
 		for (int i = idx; i < numItems; i++)
-			aList[i] = aList[i + 1]; // [i + 1] out of bounds if array not resized early.
+			aList[i] = aList[i + 1]; 	// [i + 1] out of bounds if array not resized early.
 		numItems--;
 		cout << endl << "List item " << rem << " has been removed!" << endl;
 	}
@@ -133,7 +133,7 @@ void List::displayCart(){
 		 << "Unit" << setw(10) << "Price" << setw(12) << "Ext. Price" << endl;
 	for (int i = 0; i < numItems; i++) {
 		if (aList[i].getExtPrice() != 0) {
-			if (i >= 9) { spacer = ""; }	// Keeps List console display item #'s
+			if (i >= 9) { spacer = ""; }		// Keeps List console display item #'s
 			cout << spacer << i + 1;		// > 9 aligned properly on console. 
 			aList[i].displayItems();
 		}

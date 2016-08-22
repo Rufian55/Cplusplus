@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: LoadedDie.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/24/2016
 ** Description: Implementation file for LoadedDie class.
 ** Input: Player's die object.

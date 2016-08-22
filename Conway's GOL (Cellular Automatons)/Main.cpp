@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Main.cpp
-** Author: Chris Kearns (CS-162-400-W16)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Main Program file - menu logic and function calls.
 ** Input: User input mandatory.
@@ -23,12 +23,12 @@ using std::endl;
 
 int main() {
 	// Initial user prompt for desired matrix size.
-	int whichOne = -1;									 // Choice for which simulator to run.
-	int howFast = -1;									 // Choice for speed of simulator.
-	int numIters = -1;									 // Choice for # of iterations to run.
-	int xOff = -100;									 // Chioce for x-axis offset.
-	int yOff = -100;									 // Choice for y-axis offset.
-	int collector[4];									 // Array to keep parameter passing simpler.
+	int whichOne = -1;	 // Choice for which simulator to run.
+	int howFast = -1;	 // Choice for speed of simulator.
+	int numIters = -1;	 // Choice for # of iterations to run.
+	int xOff = -100;	 // Chioce for x-axis offset.
+	int yOff = -100;	 // Choice for y-axis offset.
+	int collector[4];	 // Array to keep parameter passing simpler.
 	int transpose[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; // Speed control transpose utility array.
 
 	// User Input frame 1, which one?

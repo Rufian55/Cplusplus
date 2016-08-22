@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Die.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/24/2016
 ** Description: Implementation file for Die class.
 ** Input: int sides, bool load.

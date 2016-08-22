@@ -1,5 +1,5 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 01/31/2016
 # File: Makefile
 # Description: makefile for Grocery List Program.

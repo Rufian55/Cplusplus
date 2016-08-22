@@ -1,12 +1,11 @@
 /****************************************************************************************
 ** Program Filename: Critter.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Critter class implementation file.
 *****************************************************************************************/
 #include "Critter.hpp"
 #include<cstdlib>
-
 
 /***************************************************************************************
 ** Function: getRan()

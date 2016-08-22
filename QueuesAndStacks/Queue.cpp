@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Queue.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Queue class implementation file.
 ** Input:
@@ -25,18 +25,17 @@ Queue::~Queue(){		// Queue destructor that calls clear() function to remove all 
 /***************************************************************************************
 ** Function: add();
 ** Description: Adds a node to the queue and aligns pointers correctly.
-**
 ** Parameters: int num that is to be added to the queue.
 ** Pre-Conditions:
 ** Post-Conditions:
 ****************************************************************************************/
 void Queue::add(int num){
-	if (isEmpty()) {					// Checks if the queue is empty.
+	if (isEmpty()) {				// Checks if the queue is empty.
 		front = new QueueNode(num);		// front pointer assigned the new QueueNode with num var.
-		back = front;					// back pointer now points to front - just one node!
+		back = front;				// back pointer now points to front - just one node!
 	}else{
-		back->next = new QueueNode(num);// back pointer gets the new QueueNode object.
-		back = back->next;				// back pointer now points to the new QueueNode. 
+		back->next = new QueueNode(num);	// back pointer gets the new QueueNode object.
+		back = back->next;			// back pointer now points to the new QueueNode. 
 	}
 }
 
@@ -50,14 +49,14 @@ void Queue::add(int num){
 ** Post-Conditions:
 ****************************************************************************************/
 int Queue::remove(int &num) {
-	QueueNode *temp;									// Declare QueueNode type pointer.
+	QueueNode *temp;				// Declare QueueNode type pointer.
 	if (isEmpty()) {
 		cout << "The queue is empty!" << endl;
-	}else{											// Remove value from the front of the queue.
-		num = front->var;								// num is set to the removed var via pointer.
-		temp = front;									// temp-orarily assign as the front pointer.
-		front = front->next;							// Assign front the "next" pointer.
-		delete temp;									// Delete the temp (just removed pointer).
+	}else{						// Remove value from the front of the queue.
+		num = front->var;			// num is set to the removed var via pointer.
+		temp = front;				// temp-orarily assign as the front pointer.
+		front = front->next;			// Assign front the "next" pointer.
+		delete temp;				// Delete the temp (just removed pointer).
 	}
 }
 
@@ -71,7 +70,7 @@ int Queue::remove(int &num) {
 ** Post-Conditions:
 ****************************************************************************************/
 bool Queue::isEmpty() {
-	if (front == NULL) {								// is top pointer set to NULL?
+	if (front == NULL) {				// is top pointer set to NULL?
 		return true;
 	}else{
 		return false;
@@ -88,8 +87,8 @@ bool Queue::isEmpty() {
 ** Post-Conditions:
 ****************************************************************************************/
 void Queue::clear(){
-	int aVar;									// A var for remove() operation when
-	while (!isEmpty()) {						//   called by Destructor.
+	int aVar;					// A var for remove() operation when
+	while (!isEmpty()) {				//   called by Destructor.
 		remove(aVar);
 	}
 }

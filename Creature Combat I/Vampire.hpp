@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Vampire.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: Vampire child class declaration file.
 ** Input:
@@ -17,10 +17,10 @@ private:
 
 protected:
 	int strength;	// 18
-	int numDie;		//  1
+	int numDie;	//  1
 	int dieSides_A;	// 12
 	int dieSides_D;	//  6
-	int armor;		//  1
+	int armor;	//  1
 	bool charm;
 
 public:

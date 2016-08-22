@@ -1,8 +1,8 @@
 #########################################################
-# Author: Chris Kearns (kearnsc)
+# Author: Chris Kearns
 # Date: 01/24/2016
 # File: Makefile
-# Description: makefile for Lab3 CS162-400-W16. 
+# Description: makefile for Dice Game "RollEm" . 
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.

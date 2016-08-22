@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: BlueMen.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: BlueMen class implementation file.
 *****************************************************************************************/
@@ -20,7 +20,6 @@ using std::endl;
 /***************************************************************************************
 ** Function: BlueMenn()
 ** Description: Constructor for BlueMen derived class.
-**
 ** Parameters: user defind name and int player (which player's team this Creature is on.
 ** Pre-Conditions:
 ** Post-Conditions:

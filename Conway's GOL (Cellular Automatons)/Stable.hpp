@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Stable.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Header file for Stable.cpp.
 ** Input:
@@ -11,4 +11,4 @@
 
 void stable(int anArray[]);
 
-#endif //!STABLE_HPP
+#endif

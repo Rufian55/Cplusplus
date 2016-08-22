@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Oscillator.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Header file for Oscillator.cpp.
 ** Input:
@@ -11,4 +11,4 @@
 
 void oscillator(int anArray[]);
 
-#endif //!OSCILLATOR_HPP
+#endif

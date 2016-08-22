@@ -1,8 +1,8 @@
 /****************************************************************************************
-** Program Filename: Determinant.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Program Filename: BlankGrid.hpp
+** Author: Chris Kearns
 ** Date: 1/8/2016
-** Description: Header file for Determinant.cpp.
+** Description: Header file for BlankGrid.cpp.
 ** Input:
 ** Output:
 ****************************************************************************************/
@@ -11,4 +11,4 @@
 
 void blankGrid(int anArray[]);
 
-#endif //!BLANKGRID_HPP
+#endif

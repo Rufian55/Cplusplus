@@ -1,9 +1,3 @@
-/* (2)
-FibonacciNR.hpp
-Created on: Sep 11, 2010
-Author: julian  
-joseph.arul83@gmail.com
- */
 #ifndef FIBONACCINR_HPP
 #define FIBONACCINR_HPP
 
@@ -19,4 +13,4 @@ public:
 	void PrintFibonacci();
 
 };
-#endif // FIBONACCINR_HPP
+#endif

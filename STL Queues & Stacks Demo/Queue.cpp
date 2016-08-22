@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Queue.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 3/06/2016
 ** Description: Queue class implementation file.
 ** Input:
@@ -11,7 +11,7 @@
 
 
 /*******************************************************************************
-**							function intGen()
+**			function intGen()
 ** Returns a random var from 1 to 1000 on call. srand seed is in main().
 ******************************************************************************/
 int Queue::intGen() {
@@ -21,7 +21,7 @@ int Queue::intGen() {
 
 
 /*******************************************************************************
-**							function isTrue()
+**			function isTrue()
 ** Returns a bool based upon the probablity inputed. srand seed is in main().
 ** Works by comparing a randome number/RAND_MAX to user inputted probablity/100.
 *******************************************************************************/

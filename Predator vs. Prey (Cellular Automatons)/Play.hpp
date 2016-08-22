@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Play.hpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/7/2016
 ** Description: Play class declaration file. 
 *****************************************************************************************/
@@ -28,4 +28,4 @@ public:
 	void dBugBreed(int, int);
 	string palette(int);
 };
-#endif //!PLAY_HPP
+#endif

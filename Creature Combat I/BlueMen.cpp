@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: BlueMen.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/14/2016
 ** Description: BlueMen class implementation file.
 ** Input:

@@ -30,7 +30,7 @@ private:
 	int unixTime;
 	int suppress;
 protected:
-	char backPack[7];							// Container, limit 7 chars.
+	char backPack[7];					// Container, limit 7 chars.
 public:
 	ThrowBack() {
 		initBP();
@@ -39,19 +39,19 @@ public:
 		initPPieces();
 		setSuppress(false);
 	}
-	~ThrowBack() {}								// Memory management handled by throwBack()
+	~ThrowBack() {}						// Memory management handled by throwBack()
 
 	void throwBack(Space*, Space*, Space*, Space*, Space*, Space*, Space*, Space*, ThrowBack*);
 
-	void setStrength() { this->strength = 50; }	// Local initializer.
+	void setStrength() { this->strength = 50; }		// Local initializer.
 	virtual void setStrength(int);				// Overload local setter.
-	virtual int getStrength();					// Local getter.
+	virtual int getStrength();				// Local getter.
 
 	void initBP();
 	void displayBP();
 	void updateBP();
 	void setWin() { this->win = 0; }			// Local initiakizer.
-	void setWin(int);							// Overload.
+	void setWin(int);					// Overload.
 	int getWin();
 	void initPPieces();
 	void setGameTime();

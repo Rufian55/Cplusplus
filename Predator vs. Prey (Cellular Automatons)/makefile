@@ -2,7 +2,7 @@
 # Author: Chris Kearns (kearnsc)
 # Date: 02/07/2016
 # File: Makefile
-# Description: makefile for Lab_5 CS162-400-W16. 
+# Description: makefile for PredPrey.
 # Edit the variables under "USER SECTION" as needed.
 # To execute the makefile on unix-y systems, type 'make'.
 # If that doesn't work, try 'make -f makefile'.
@@ -66,7 +66,7 @@ PROGS = ${PROG1}
 
 # This is the name of your tar/compressed file. 
 # Edit name as needed. Keep the format.
-TAR = cs162_assignment1_kearnsc.tar.bz2
+TAR = PredPrey.tar.bz2
 
 #####################
 ### BUILD SECTION ###

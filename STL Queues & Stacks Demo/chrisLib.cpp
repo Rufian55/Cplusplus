@@ -1,5 +1,5 @@
 /*******************************************************************************
-**							chrisLib()
+**			chrisLib()
 ** Collection of utility and user input validation functions. #include to your
 ** main.cpp file and adjust funtions as nesscessry for proper operation.
 ******************************************************************************/
@@ -16,7 +16,7 @@ using std::string;
 
 
 /*******************************************************************************
-**							function bufHeader()
+**			function bufHeader()
 ** User collection function for determining desired probability of adding a 
 ** randomly generated value to the buffer (chrsiQueue). Returns the collected
 ** pctPut double to be used for stl queue functions.
@@ -44,7 +44,7 @@ double bufHeader() {
 
 
 /*******************************************************************************
-**							function remHeader()
+**			function remHeader()
 ** User input collection function for determining desired probability of removing
 ** a value AND the node from the buffer (chrsiQueue). Returns the collected
 ** pctRem var to be used for stl queue processing
@@ -71,7 +71,7 @@ double remHeader() {
 
 
 /*******************************************************************************
-**							function itersHeader()
+**			function itersHeader()
 ** User input collection function for collecting the number of iterations to run 
 ** the buffer queue demonsttation program.  Include full user input validation
 ** and error resolution.
@@ -98,7 +98,7 @@ int itersHeader() {
 
 
 /*******************************************************************************
-**							function checkVar()
+**			function checkVar()
 ** User input collection and validation function.  Returns apprpriate var for
 ** determining behaviour of the palindrome() & ultimately Stack::palinBuilder()
 ** funtion.
@@ -133,7 +133,7 @@ int checkVar() {
 
 
 /*******************************************************************************
-**							function caser()
+**			function caser()
 ** User string to be converted to a palindrome collection function that accepts
 ** an int var == to 1 or 2, ignored otherwise, & sets the user string to upper
 ** or lower case or allows the mixed upper or lower case string through to

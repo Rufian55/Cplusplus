@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Queue.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 2/28/2016
 ** Description: Queue class implementation file.
 *****************************************************************************************/
@@ -10,7 +10,7 @@ using std::cout;
 using std::endl;
 
 
-Queue::Queue(){	// Queue constructor setting front and back pointers to NULL
+Queue::Queue(){		// Queue constructor setting front and back pointers to NULL
 	front = NULL;
 	back = NULL;
 }
@@ -27,12 +27,12 @@ Queue::~Queue(){	// Queue destructor that calls clear() function to remove all n
 ** Post-Conditions: A Creature pointer is added to the queue.
 ****************************************************************************************/
 void Queue::add(Creature *aCreature){
-	if (isEmpty()) {						// Checks if the queue is empty.
-		front = new QueueNode(aCreature);		// front pointer assigned the new QueueNode with aCreature pointer as var.
-		back = front;						// back pointer now points to front - just one node!
+	if (isEmpty()) {				// Checks if the queue is empty.
+		front = new QueueNode(aCreature);	// front pointer assigned the new QueueNode with aCreature pointer as var.
+		back = front;				// back pointer now points to front - just one node!
 	}else{
 		back->next = new QueueNode(aCreature);	// back pointer gets the new QueueNode object pointer.
-		back = back->next;					// back pointer now points to the new QueueNode. 
+		back = back->next;			// back pointer now points to the new QueueNode. 
 	}
 }
 
@@ -45,15 +45,15 @@ void Queue::add(Creature *aCreature){
 ** Post-Conditions: Creature pointer is removed.
 ****************************************************************************************/
 Creature* Queue::remove() {
-	QueueNode *temp;							// Declare QueueNode type pointer.
+	QueueNode *temp;				// Declare QueueNode type pointer.
 	if (isEmpty()) {
 		cout << "The queue is empty!" << endl;
 	}
-	else {									// Remove value from the front of the queue.
-		Creature* Cret = front->aCreature;			// Cret is set to the removed var via pointer.
-		temp = front;							// temp-orarily assign as the front pointer.
-		front = front->next;					// Assign front the "next" pointer.
-		delete temp;							// Delete the temp (just removed pointer).
+	else {						// Remove value from the front of the queue.
+		Creature* Cret = front->aCreature;	// Cret is set to the removed var via pointer.
+		temp = front;				// temp-orarily assign as the front pointer.
+		front = front->next;			// Assign front the "next" pointer.
+		delete temp;				// Delete the temp (just removed pointer).
 		return Cret;
 	}
 }
@@ -67,7 +67,7 @@ Creature* Queue::remove() {
 ** Post-Conditions:
 ****************************************************************************************/
 bool Queue::isEmpty() {
-	if (front == NULL) {						// is top pointer set to NULL?
+	if (front == NULL) {				// is top pointer set to NULL?
 		return true;
 	}else{
 		return false;
@@ -83,8 +83,8 @@ bool Queue::isEmpty() {
 ** Post-Conditions:
 ****************************************************************************************/
 void Queue::clear(){
-	Creature *rCreature;					// A pointer for remove() operation when
-	while (!isEmpty()) {					// called by Destructor.
+	Creature *rCreature;				// A pointer for remove() operation when
+	while (!isEmpty()) {				// called by Destructor.
 		remove();
 	}
 }

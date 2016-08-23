@@ -467,9 +467,7 @@ int main() {
 *                        creatureSort()
 * This function performs an ascending-order selection sort on an array of
 * creature object pointers by calling their getcScore() method. The parameter
-* size holds the number of elements in the array.  Modified from int sort to
-* *Creature sort on getcScore() via C++ Early Objects, Gaddis, 8th Edition,
-* Program 9-5.
+* size holds the number of elements in the array.
 *****************************************************************************/
 void Fight::creatureSort(Creature* anArray[], int size) {
 	int i;

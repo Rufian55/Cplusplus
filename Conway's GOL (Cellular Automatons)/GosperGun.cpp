@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: GosperGun.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Contains the gosperGun() function.
 ** Input: array "collector"
@@ -24,14 +24,14 @@ using std::endl;
 ****************************************************************************************/
 void gosperGun(int anArray[]) {
 	int univRows, winRows, univCols, winCols;
-	univRows = 60;									// Row bounds of our Universe.
-	winRows = 40;									// Row bounds of our Window.
-	univCols = 40;									// Column bounds of our Universe.
-	winCols = 20;									// Column bounds of our Window.
-	int iter = 0;									// Counter - each matrix outputed is 1 iteration.
-	int time = 50000 * anArray[0];					// Time between iterations.
-	int iterations = anArray[1];					// Iterations desired by user.
-	int aliveCount = 0;								// Counter to determine cell state.
+	univRows = 60;					// Row bounds of our Universe.
+	winRows = 40;					// Row bounds of our Window.
+	univCols = 40;					// Column bounds of our Universe.
+	winCols = 20;					// Column bounds of our Window.
+	int iter = 0;					// Counter - each matrix outputed is 1 iteration.
+	int time = 50000 * anArray[0];			// Time between iterations.
+	int iterations = anArray[1];			// Iterations desired by user.
+	int aliveCount = 0;				// Counter to determine cell state.
 	int xOffset = anArray[2] + 18;			// x axis offset for initial image. (collector[2] ignored). (20)
 	int yOffset = 31 - anArray[3];			// y-axis offset for initial image. (collector[3]) ignored). (30)
 
@@ -45,7 +45,7 @@ void gosperGun(int anArray[]) {
 		}
 	}
 
-	// "Inject" initial image into matrix_0. See footnote (4) in Main.cpp
+	// "Inject" initial image into matrix_0.
 	int i, j;
 	i = j = 0;
 	
@@ -108,10 +108,9 @@ void gosperGun(int anArray[]) {
 			cout << endl;
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time); 
 
-		// Move cursor up above matrix_1 rendering. See footnote (1) in Main.cpp
+		// Move cursor up above matrix_1 rendering.
 		cout << "\033[41A" << "Gosper Glider Gun is running from point: (" << anArray[2]
 			<< "," << anArray[3] << "). " << "Iteration count = " << iter << endl;
 
@@ -120,7 +119,7 @@ void gosperGun(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_0[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;
@@ -182,7 +181,7 @@ void gosperGun(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_1[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;
@@ -231,13 +230,11 @@ void gosperGun(int anArray[]) {
 			}
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time);
 		
 		iter++;
 		
 		// Move cursor up above matrix_1 rendering, clear console, user message!
-		// See footnote (1) in Main.cpp
 		cout << "\033[41A" << "Gosper Glider Gun is running from point: (" << anArray[2]
 			<< "," << anArray[3] << "). " << "Iteration count = " << iter << endl;
 

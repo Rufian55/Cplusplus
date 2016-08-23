@@ -447,31 +447,10 @@ int main() {
 	}
 	
 
-	// Finally, clear console and output message. See footnotes (1) & (2).
+	// Finally, clear console and output message.
 	cout << "\033[40A"
 		 << "\033[2J"
 		 << "\033[1; 1H"
 		 << "Thank you for playing Chris' version of Conway's Game of Life." << endl;
 
 }
-
-/*
-Attributes and sources.
-
-(1) Adapted from article at www.stackoverflow.com/questions/3277058/how-to-rollback-lines-from-cout/
-
-(2) Adapted from article at www.stackoverflow.com/questions/4062045/clearing-terminal-in-linux-with-c-code and
-	(https://) + en.wikipedia.org/wiki/ANSI_escape_code
-
-(3) Adapted from posting on time delay functions at www.cplusplus.com/forum/unices/10491/
-
-(4) Gosper Gun initial image by Bill Gosper, 1970, found at (https://) + en.wikipedia.org/wiki/Gun_(cellular_automaton)
-
-(5) Glider initial image by Richard K. Guy, 1970 and found at numerous locations on internet.
-
-(6) Galaxy inital image by Jan Kok, 1971, found at www.conwaylife.com/patterns/koksgalaxy_105.lif
-
-(7) Simple Image oscillator by many.
-
-(8) Stable image by many.
-*/

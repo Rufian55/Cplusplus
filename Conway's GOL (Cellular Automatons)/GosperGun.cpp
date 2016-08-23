@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: GosperGun.cpp
-** Author: Chris Kearns
+** Author: Chris Kearns (CS-162-400 W2016)
 ** Date: 1/17/2016
 ** Description: Contains the gosperGun() function.
 ** Input: array "collector"
@@ -13,7 +13,7 @@ using std::setw;
 using std::cout;
 using std::cin;
 using std::endl;
-
+#include <unistd.h>
 
 /***************************************************************************************
 ** Function: gosperGun()
@@ -24,14 +24,14 @@ using std::endl;
 ****************************************************************************************/
 void gosperGun(int anArray[]) {
 	int univRows, winRows, univCols, winCols;
-	univRows = 60;					// Row bounds of our Universe.
-	winRows = 40;					// Row bounds of our Window.
-	univCols = 40;					// Column bounds of our Universe.
-	winCols = 20;					// Column bounds of our Window.
-	int iter = 0;					// Counter - each matrix outputed is 1 iteration.
-	int time = 50000 * anArray[0];			// Time between iterations.
-	int iterations = anArray[1];			// Iterations desired by user.
-	int aliveCount = 0;				// Counter to determine cell state.
+	univRows = 60;									// Row bounds of our Universe.
+	winRows = 40;									// Row bounds of our Window.
+	univCols = 40;									// Column bounds of our Universe.
+	winCols = 20;									// Column bounds of our Window.
+	int iter = 0;									// Counter - each matrix outputed is 1 iteration.
+	int time = 50000 * anArray[0];					// Time between iterations.
+	int iterations = anArray[1];					// Iterations desired by user.
+	int aliveCount = 0;								// Counter to determine cell state.
 	int xOffset = anArray[2] + 18;			// x axis offset for initial image. (collector[2] ignored). (20)
 	int yOffset = 31 - anArray[3];			// y-axis offset for initial image. (collector[3]) ignored). (30)
 
@@ -75,7 +75,7 @@ void gosperGun(int anArray[]) {
 	matrix_0[i + 6 + yOffset][j - 7 + xOffset] = "X";
 	matrix_0[i + 6 + yOffset][j - 1 + xOffset] = "X";
 	matrix_0[i + 7 + yOffset][j - 7 + xOffset] = "X";
-	matrix_0[i + 7 + yOffset][j - 1 + xOffset] = "X";
+	matrix_0[i + 7 + yOffset][j -1 + xOffset] = "X";
 	matrix_0[i + 8 + yOffset][j - 6 + xOffset] = "X";
 	matrix_0[i + 8 + yOffset][j - 2 + xOffset] = "X";
 	matrix_0[i + 9 + yOffset][j - 5 + xOffset] = "X";
@@ -120,7 +120,7 @@ void gosperGun(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;				// Count occupied cells.
+				aliveCount = 0;						// Count occupied cells.
 
 				if (matrix_0[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;
@@ -182,7 +182,7 @@ void gosperGun(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;				// Count occupied cells.
+				aliveCount = 0;						// Count occupied cells.
 
 				if (matrix_1[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;

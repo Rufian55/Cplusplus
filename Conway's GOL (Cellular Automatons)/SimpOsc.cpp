@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: SimpOsc.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Contains the simpOsc() function.
 ** Input: array "collector"
@@ -24,16 +24,16 @@ using std::endl;
 ****************************************************************************************/
 void simpOsc(int anArray[]) {
 	int univRows, winRows, univCols, winCols;
-	univRows = 60;									// Row bounds of our Universe.
-	winRows = 40;									// Row bounds of our Window.
-	univCols = 40;									// Column bounds of our Universe.
-	winCols = 20;									// Column bounds of our Window.
-	int iter = 0;									// Counter - 1 anim. loop is 1 iteration.
-	int time = 50000 * anArray[0];					// Time between iterations.
-	int iterations = anArray[1];					// Iterations desired by user.
-	int aliveCount = 0;								// Counter to determine cell state.
-	int xOffset = anArray[2] + 9;					// x axis offset for initial image.
-	int yOffset = anArray[3] + 9;					// y-axis offset for inital image.
+	univRows = 60;					// Row bounds of our Universe.
+	winRows = 40;					// Row bounds of our Window.
+	univCols = 40;					// Column bounds of our Universe.
+	winCols = 20;					// Column bounds of our Window.
+	int iter = 0;					// Counter - 1 anim. loop is 1 iteration.
+	int time = 50000 * anArray[0];			// Time between iterations.
+	int iterations = anArray[1];			// Iterations desired by user.
+	int aliveCount = 0;				// Counter to determine cell state.
+	int xOffset = anArray[2] + 9;			// x axis offset for initial image.
+	int yOffset = anArray[3] + 9;			// y-axis offset for inital image.
 
 	// Our initial Universe array matrix_0 - all cells dead.
 	std::string matrix_0[univRows][univCols];
@@ -45,7 +45,7 @@ void simpOsc(int anArray[]) {
 		}
 	}
 
-	// "Inject" initial Simple Oscillator image. See footnote (7) in Main.cpp
+	// "Inject" initial Simple Oscillator image.
 	int i, j;
 	i = j = 0;
 	matrix_0[i - 1 + yOffset][j + xOffset] = "X";
@@ -76,7 +76,6 @@ void simpOsc(int anArray[]) {
 			cout << endl;
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time);
 
 		// Move cursor up above matrix_1 rendering. See footnote (1) in Main.cpp
@@ -88,7 +87,7 @@ void simpOsc(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_0[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;
@@ -150,7 +149,7 @@ void simpOsc(int anArray[]) {
 		for (int i = 1; i < 59; i++) {
 			for (int j = 1; j < 39; j++) {
 
-				aliveCount = 0;						// Count occupied cells.
+				aliveCount = 0;				// Count occupied cells.
 
 				if (matrix_1[i - 1][j - 1] == "X")	// Top left.
 					aliveCount++;
@@ -199,13 +198,11 @@ void simpOsc(int anArray[]) {
 			}
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time);
 
 		iter++;
 
-		// Move cursor up above matrix_1 rendering, clear console, user message!
-		// See footnote (1) in Main.cpp
+		// Move cursor up above matrix_1 rendering, clear console, user message.
 		cout << "\033[41A" << "Simple Oscillator is running from point: (" << anArray[2]
 			 << "," << anArray[3] << "). " << "Iteration count = " << iter << endl;
 

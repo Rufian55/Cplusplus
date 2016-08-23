@@ -65,10 +65,9 @@ void blankGrid(int anArray[]) {
 			cout << endl;
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time);
 
-		// Move cursor up above matrix_0 rendering. See footnote (1) in Main.cpp
+		// Move cursor up above matrix_0 rendering.
 		cout << "\033[41A" << "Blank Grid is running from point: (" << anArray[2] 
 			 << "," << anArray[3] << "). " << "Iteration count = " << iter << endl;
 
@@ -188,13 +187,11 @@ void blankGrid(int anArray[]) {
 			}
 		}
 
-		// Sleep. See footnote(3) in Main.cpp.
 		usleep(time);
 
 		iter++;
 
 		// Move cursor up above matrix_1 rendering, clear console, user message!
-		// See footnote (1) in Main.cpp
 		cout << "\033[41A" << "Blank Grid is running from point: (" << anArray[2] 
 			 <<  "," << anArray[3] << "). "<< "Iteration count = " << iter << endl;
 

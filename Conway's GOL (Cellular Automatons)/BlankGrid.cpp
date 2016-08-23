@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: BlankGrid.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/17/2016
 ** Description: Contains the blankGrid() function.
 ** Input: array "collector"

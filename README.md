@@ -19,7 +19,7 @@ Queues and Stacks - Non STL implementations of Queues and Stacks demo program.
 
 Recursion Demo - Several applications of recursion demo program.
 
-STL Queues and Stacks Demo - demo program using the C standard template library.
+STL Queues and Stacks Demo - demo program using the C++ standard template library.
 
 Searching and Sorting - utility functions for searching and sorting in C++ programming.
 

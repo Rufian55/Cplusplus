@@ -99,7 +99,7 @@ void GrandPrize::grandPrize() {
 		usleep(time);
 
 		// Move cursor up above matrix_1 rendering.
-		cout << "\033[41A" << palette(24) << "\tYou are the winner!! For Spring Break, YOU"
+		cout << "\033[41A" << palette(24) << "\tYou are the winner!! For Two Full Weeks, YOU"
 			<< " are Ruler of the Galaxy!" << palette(1) << "\n";
 
 		//Build matrix_1 *********************************************************

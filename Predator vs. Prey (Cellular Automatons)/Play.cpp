@@ -26,7 +26,7 @@ using std::rand;
 /***************************************************************************************
 ** Function: grid()
 ** Description: user menu system, initialization of Ant and Doodlbug objects, drives 
-** simulation via a double array matriz utilizing move(), starve(), and breed() funtions.
+** simulation via a double array matrix utilizing move(), starve(), and breed() functions.
 ** Parameters:
 ** Pre-Conditions: Runs on Linux console.
 ** Post-Conditions: None.
@@ -819,7 +819,7 @@ string Play::cursorMover() {
 }
 
 /*******************************************************************************
-**							function pallete()
+**			function pallete()
 ** Takes an int argument for selected color and returns a string containing the
 ** ASCII escape codes for color and/or text decoration.  Should be used cout and
 ** followed by a default color reset in the same cout line. Ints outside of

@@ -43,7 +43,7 @@ Red::~Red() {
 
 
 /*******************************************************************************
-**			function setTrngth() 3 each.
+**			function setSrength() 3 each.
 ** Setters for stregth. setStrength() for initialization, setSTregth(int) for
 ** updating local room strength changes. getStrength for logic control, and
 ** acceptStrength() sets overall current Player strength upon Player entry to

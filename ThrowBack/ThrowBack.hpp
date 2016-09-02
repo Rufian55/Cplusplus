@@ -50,7 +50,7 @@ public:
 	void initBP();
 	void displayBP();
 	void updateBP();
-	void setWin() { this->win = 0; }			// Local initiakizer.
+	void setWin() { this->win = 0; }			// Local initializer.
 	void setWin(int);					// Overload.
 	int getWin();
 	void initPPieces();

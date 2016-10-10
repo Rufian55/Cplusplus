@@ -13,7 +13,7 @@ Grocery List - Backend for a Grocery List app - implementation and testing compl
 
 Iteration vs. Recursion - Iteration vs. recursion with Fibonacci numbers and Tail Recursion vs. Non Tail Recursion.
 
-Predator vs. Prey Cellualar Automaton - A symbiotic relationship between predator and prey simulator.
+Predator vs. Prey Cellular Automaton - A symbiotic relationship between predator and prey simulator.
 
 Queues and Stacks - Non STL implementations of Queues and Stacks demo program.
 
@@ -25,4 +25,4 @@ Searching and Sorting - utility functions for searching and sorting in C++ progr
 
 ThrowBack - A text based game moving through spaces featuring your favorite and not so favorite cartoon characters.
 
-** None of the characters used in the above noted games, paticularly Throwback, are licensed. Use at your peril !!
+** None of the characters used in the above noted games, particularly Throwback, are licensed. Use at your peril !!
